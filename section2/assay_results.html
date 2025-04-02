@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assay Documentation</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../template.js"></script>
+</head>
+<body>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+    
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+            <!-- Sidebar will be loaded here -->
+            <div id="sidebar-section"></div>
+            
+            <!-- Main content area -->
+            <div class="main-content">
+                <h1>Assay Results</h1>
+
+                <p>A class representing the metadata that is generated from an experimental or statistical assay.</p>
+                
+                <h2>Assay Results Properties</h2>
+                
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>idResults</td>
+                                <td>An internal ID used to identify assay results in a database.</td>
+                            </tr>
+                            <tr>
+                                <td>ExperimentID</td>
+                                <td>An ID used to identify the experiment an assay result is part of.</td>
+                            </tr>
+                            <tr>
+                                <td>GroupID</td>
+                                <td>An ID used to identify the group an assay result is about. Groups that are about an individual organism are given a special ID.</td>
+                            </tr>
+                            <tr>
+                                <td>SampleID</td>
+                                <td>An ID used to identify the sample an assay result is about.</td>
+                            </tr>
+                            <tr>
+                                <td>DocumentID</td>
+                                <td>An ID used to identify the document that contains the documentation for the sort.</td>
+                            </tr>
+                            <tr>
+                                <td>AssayType</td>
+                                <td>A string used to identify the current assay type used to generate an assay.</td>
+                            </tr>
+                            <tr>
+                                <td>OriginalAssayType</td>
+                                <td>A string used to identify the original assay type used to generate an assay. This is always an experimental assay.</td>
+                            </tr>
+                            <tr>
+                                <td>AssayTypeID</td>
+                                <td>An ID used to identify the assay ID that an AssayType or OriginalAssayType is part of.</td>
+                            </tr>
+                            <tr>
+                                <td>Datatype</td>
+                                <td>A string used to identify the datatype information is stored as.</td>
+                            </tr>
+                            <tr>
+                                <td>DatatypeID</td>
+                                <td>An ontology ID that corresponds to the Datatype.</td>
+                            </tr>
+                            <tr>
+                                <td>Data_Size</td>
+                                <td>A string used to identify the size of a document. Currently used as a string due to variable size from matrices or hierarchical data.</td>
+                            </tr>
+                            <tr>
+                                <td>Replications</td>
+                                <td>An integer that lists how many times an assay is repeated.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                
+                <!-- <h2>Assay Types</h2>
+                <p>Assays are categorized into three main types:</p>
+                <ul>
+                    <li><strong>Experimental Assay</strong> - Physical experiments that consume reagents</li>
+                    <li><strong>Statistical Assay</strong> - Analysis of experimental data</li>
+                    <li><strong>Computational Assay</strong> - Computer-based analysis with specific input data types</li>
+                </ul>
+                
+                <h2>Related Information</h2>
+                <p>For more details on specific assay implementations, please refer to the relevant documentation sections.</p> -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+</html>
