@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assay Documentation</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../template.js"></script>
+</head>
+<body>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+    
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+            <!-- Sidebar will be loaded here -->
+            <div id="sidebar-section"></div>
+            
+            <!-- Main content area -->
+            <div class="main-content">
+                <h1>Sample</h1>
+                <h2>Sample Properties</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>idSample</td>
+                            <td>An internal ID used to identify a specific sample.</td>
+                        </tr>
+                        <tr>
+                            <td>GroupID</td>
+                            <td>The group of organism instances that data is collected from. This is done for samples that are generated from multiple organisms. For samples that have a group size of 1, a value of '0' is assigned for its GroupID.</td>
+                        </tr>
+                        <tr>
+                            <td>SampleType</td>
+                            <td>A string representing the type of process a sample was used for (e.g., 'swabbing').</td>
+                        </tr>
+                        <tr>
+                            <td>SampleTypeID</td>
+                            <td>A string representing the ontological ID listed by SampleType.</td>
+                        </tr>
+                        <tr>
+                            <td>SampleCollection</td>
+                            <td>A string representing the collection method of the sample.</td>
+                        </tr>
+                        <tr>
+                            <td>OrganismID</td>
+                            <td>For samples that have a specific organism, this field maps to the ID of the organism.</td>
+                        </tr>
+                        <tr>
+                            <td>SampleSource</td>
+                            <td>A string representing the organism or tissue source that a sample was collected from. For specimen collection, tissue is preferred.</td>
+                        </tr>
+                        <tr>
+                            <td>SampleSourceID</td>
+                            <td>A string representing the ontological ID listed by the sample source.</td>
+                        </tr>
+                        <tr>
+                            <td>SampleDestruction</td>
+                            <td>A string representing whether the sample was preserved or destroyed.</td>
+                        </tr>
+                        <tr>
+                            <td>OriginalSample</td>
+                            <td>An integer representing the original sampleID from which the sample is derived. A sample ID of 1 indicates that this sample was collected from an organism without processing.</td>
+                        </tr>
+                        <tr>
+                            <td>Comments</td>
+                            <td>A string used as a placeholder for additional comments or notes.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+</html>

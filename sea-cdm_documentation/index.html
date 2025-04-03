@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 1 - Content with Sidebar</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../template.js"></script>
+</head>
+<body>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+    
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+            <!-- Sidebar navigation -->
+            <div id="sidebar-section"></div>
+            
+            <!-- Main content area -->
+            <div class="main-content">
+                <h1>Page with Sidebar Navigation</h1>
+                
+                <p>This page demonstrates a layout with a scrollable sidebar navigation on the left side. The sidebar lists all available pages in Section 1 for easy navigation.</p>
+                
+                <p>The sidebar will remain visible as you scroll through the content, making it easy for users to jump to different pages at any time.</p>
+                
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Sticky sidebar that stays in view while scrolling</li>
+                    <li>Responsive design that adapts to mobile devices</li>
+                    <li>Visual indication of the current active page</li>
+                    <li>Scrollable list when there are many navigation items</li>
+                </ul>
+                
+                <h2>How to Use This Template</h2>
+                <p>To create additional pages with this sidebar layout:</p>
+                <ol>
+                    <li>Copy this HTML file to create a new page</li>
+                    <li>Update the title, content, and sidebar active state</li>
+                    <li>Adjust the sidebar links to reflect your site structure</li>
+                </ol>
+                
+                <h2>Sample Content</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.</p>
+                
+                <p>Nulla facilisi. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.</p>
+                
+                <!-- Add more content here to make the page scrollable -->
+                <h2>Additional Information</h2>
+                <p>Nulla facilisi. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.</p>
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+    
+    <script>
+        setAuthorName('Your Name');
+        
+        // Add a class to highlight the current page in the sidebar
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the current page filename
+            const currentPage = window.location.pathname.split('/').pop();
+            
+            // Find the link in the sidebar that matches the current page and add the active class
+            const sidebarLinks = document.querySelectorAll('.sidebar a');
+            sidebarLinks.forEach(link => {
+                const linkHref = link.getAttribute('href');
+                if (linkHref === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assay Documentation</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../template.js"></script>
+</head>
+<body>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+    
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+            <!-- Sidebar will be loaded here -->
+            <div id="sidebar-section"></div>
+            
+            <!-- Main content area -->
+            <div class="main-content">
+                <h1>Occurrence</h1>
+                <p>An occurrence is defined as a history that affects an organism as part of its lifespan. Occurrences include disease processes, pregnancy, and adverse events (lethal or otherwise).</p>
+                
+                <h2>Occurrence Properties</h2>
+                
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>idOccurrence</td>
+                                <td>An internal identifier used to identify a specific occurrence.</td>
+                            </tr>
+                            <tr>
+                                <td>OrganismID</td>
+                                <td>An identifier that maps to an organism.</td>
+                            </tr>
+                            <tr>
+                                <td>OccurrenceName</td>
+                                <td>A string that lists the reported summary of an occurrence.</td>
+                            </tr>
+                            <tr>
+                                <td>OccurrenceOID</td>
+                                <td>A string that lists the ontology ID used to identify an occurrence.</td>
+                            </tr>
+                            <tr>
+                                <td>OccurrenceSeverity</td>
+                                <td>An integer that corresponds to the severity of an occurrence using the Common Terminology for Adverse Events (CTCAE). Benign occurrences are rated as 0.</td>
+                            </tr>
+                            <tr>
+                                <td>ForeignID</td>
+                                <td>A string that corresponds to the occurrence’s ID in another dataset. Must be matched with ForeignSource.</td>
+                            </tr>
+                            <tr>
+                                <td>ForeignSource</td>
+                                <td>A string identifier that corresponds to the data source of the corresponding ForeignID.</td>
+                            </tr>
+                            <tr>
+                                <td>Comments</td>
+                                <td>Placeholder for additional comments.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+</html>

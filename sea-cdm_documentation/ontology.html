@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assay Documentation</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../template.js"></script>
+</head>
+<body>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+    
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+            <!-- Sidebar will be loaded here -->
+            <div id="sidebar-section"></div>
+            
+            <!-- Main content area -->
+            <div class="main-content">
+                <h1>Ontology</h1>
+            
+                <p>This table contains a list of all ontologies used for a SEA CDM. Further information is meant to be queried or linked according to work done in SEA CDM.</p>
+                
+                <h2>Ontology Properties</h2>
+                
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>idOntology</td>
+                                <td>An internal identifier used internally to identify a specific ontology.</td>
+                            </tr>
+                            <tr>
+                                <td>DocumentationID</td>
+                                <td>An ID used to the documentation ID that contains the ontology to be queried as part of OSEAN.</td>
+                            </tr>
+                            <tr>
+                                <td>OntologyName</td>
+                                <td>A string used to provide the common name that is used as an ontology.</td>
+                            </tr>
+                            <tr>
+                                <td>OntologyString</td>
+                                <td>A string used to identify the ontology IRI that is used for terms within a specific ontology.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+</html>

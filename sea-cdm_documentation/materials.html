@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assay Documentation</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../template.js"></script>
+</head>
+<body>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+    
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+            <!-- Sidebar will be loaded here -->
+            <div id="sidebar-section"></div>
+            
+            <!-- Main content area -->
+            <div class="main-content">
+                <h1>Materials</h1>
+                <p>A material is defined as one specific material that is used as part of an experiment or assay process. Material ID needs to be accessed as part of Intervention, Sample, or Assay Tables. Complex materials, such as cocktails, are identified by an ontologyID with their components arising from other data sources.</p>
+                
+                <h2>Materials Properties</h2>
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>idMaterial</td><td>An internal identifier used internally to identify a specific material.</td></tr>
+                            <tr><td>OntologyID</td><td>A string used to identify the material used as an ontology; may be a string of a query used to generate the subclasses instead.</td></tr>
+                            <tr><td>MaterialName</td><td>A string used to name the material.</td></tr>
+                            <tr><td>Organization</td><td>A string used to identify the organization responsible for the materials.</td></tr>
+                            <tr><td>ForeignID</td><td>A string used to identify an ID that is used for a material within a different database or source.</td></tr>
+                            <tr><td>ForeignSource</td><td>A string used to identify the source for a ForeignID.</td></tr>
+                            <tr><td>Comments</td><td>Placeholder for additional comments.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+</html>
