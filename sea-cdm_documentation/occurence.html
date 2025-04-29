@@ -33,35 +33,47 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>idOccurrence</td>
+                                <td>occurrence_id</td>
                                 <td>An internal identifier used to identify a specific occurrence.</td>
                             </tr>
                             <tr>
-                                <td>OrganismID</td>
+                                <td>organism_id</td>
                                 <td>An identifier that maps to an organism.</td>
                             </tr>
                             <tr>
-                                <td>OccurrenceName</td>
+                                <td>occurrence_name</td>
                                 <td>A string that lists the reported summary of an occurrence.</td>
                             </tr>
                             <tr>
-                                <td>OccurrenceOID</td>
+                                <td>occurrence_ID</td>
                                 <td>A string that lists the ontology ID used to identify an occurrence.</td>
                             </tr>
                             <tr>
-                                <td>OccurrenceSeverity</td>
+                                <td>occurrence_severity</td>
                                 <td>An integer that corresponds to the severity of an occurrence using the Common Terminology for Adverse Events (CTCAE). Benign occurrences are rated as 0.</td>
                             </tr>
                             <tr>
-                                <td>ForeignID</td>
-                                <td>A string that corresponds to the occurrence’s ID in another dataset. Must be matched with ForeignSource.</td>
+                                <td>occurrence_onset</td>
+                                <td>A double that lists the onset of an occurrence for an organism.</td>
                             </tr>
                             <tr>
-                                <td>ForeignSource</td>
-                                <td>A string identifier that corresponds to the data source of the corresponding ForeignID.</td>
+                                <td>occurrence_onset_unit</td>
+                                <td>A string used to identify the unit for InterventionTime.</td>
                             </tr>
                             <tr>
-                                <td>Comments</td>
+                                <td>occurrence_onset_unit_id</td>
+                                <td>A string used to identify the ontology ID for TimeUnit.</td>
+                            </tr>
+                            <tr>
+                                <td>reference_id</td>
+                                <td>A string that corresponds to the occurrence’s ID in another dataset. Must be matched with reference_source_id.</td>
+                            </tr>
+                            <tr>
+                                <td>reference_source_id</td>
+                                <td>A string identifier that corresponds to the data source of the corresponding reference_id.</td>
+                            </tr>
+                            <tr>
+                                <td>comments</td>
                                 <td>Placeholder for additional comments.</td>
                             </tr>
                         </tbody>

@@ -19,6 +19,8 @@
             <!-- Main content area -->
             <div class="main-content">
                 <h1>Sample</h1>
+                <p>A sample is the result of an experiment that is collected from an organism and used to generate data. A biosample refers to the tissue or cell culture collected from an organism, while an experimental sample (expsample) is the sample that has been further processed.</p>
+                
                 <h2>Sample Properties</h2>
                 <table>
                     <thead>
@@ -29,47 +31,71 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>idSample</td>
+                            <td>sample_id</td>
                             <td>An internal ID used to identify a specific sample.</td>
                         </tr>
                         <tr>
-                            <td>GroupID</td>
-                            <td>The group of organism instances that data is collected from. This is done for samples that are generated from multiple organisms. For samples that have a group size of 1, a value of '0' is assigned for its GroupID.</td>
+                            <td>organism_id</td>
+                            <td>For samples that are composed of multiple organisms, a value of ‘0’ is assigned to organism_id and should be queried via group_id.</td>
                         </tr>
                         <tr>
-                            <td>SampleType</td>
+                            <td>group_id</td>
+                            <td>The group of organism instances that data is collected from. For samples from multiple organisms. Single-organism samples use value '0'.</td>
+                        </tr>
+                        <tr>
+                            <td>collection_time</td>
+                            <td>A double representing how long from some T0 that an organism was generated.</td>
+                        </tr>
+                        <tr>
+                            <td>t0_definition</td>
+                            <td>A string representing the reference event that collection time is measured to.</td>
+                        </tr>
+                        <tr>
+                            <td>collection_time_unit</td>
+                            <td>A string representing the unit used for the collection time.</td>
+                        </tr>
+                        <tr>
+                            <td>collection_time_unit_id</td>
+                            <td>A string representing the ontology ID for the collection_time_unit.</td>
+                        </tr>
+                        <tr>
+                            <td>biosample_reference_source</td>
+                            <td>A string representing the documentation source for the biosample ontology ID.</td>
+                        </tr>
+                        <tr>
+                            <td>biopsample_reference_id</td>
+                            <td>A string representing the ID listed by the biosample in the reference source.</td>
+                        </tr>
+                        <tr>
+                            <td>expsample_id</td>
                             <td>A string representing the type of process a sample was used for (e.g., 'swabbing').</td>
                         </tr>
                         <tr>
-                            <td>SampleTypeID</td>
-                            <td>A string representing the ontological ID listed by SampleType.</td>
+                            <td>expsample_type_id</td>
+                            <td>A string representing the ontological ID listed by the expsample type.</td>
                         </tr>
                         <tr>
-                            <td>SampleCollection</td>
-                            <td>A string representing the collection method of the sample.</td>
+                            <td>expsample_reference_source</td>
+                            <td>A string representing the documentation source for the expsample ontology ID.</td>
                         </tr>
                         <tr>
-                            <td>OrganismID</td>
-                            <td>For samples that have a specific organism, this field maps to the ID of the organism.</td>
+                            <td>expsample_reference_id</td>
+                            <td>A string representing the ID listed by the expsample in the reference source.</td>
                         </tr>
                         <tr>
-                            <td>SampleSource</td>
-                            <td>A string representing the organism or tissue source that a sample was collected from. For specimen collection, tissue is preferred.</td>
+                            <td>biosample_collection</td>
+                            <td>A string representing the collection method of the biosample.</td>
                         </tr>
                         <tr>
-                            <td>SampleSourceID</td>
-                            <td>A string representing the ontological ID listed by the sample source.</td>
+                            <td>biosample_collection_id</td>
+                            <td>A string representing the ontology ID for the biosample collection method.</td>
                         </tr>
                         <tr>
-                            <td>SampleDestruction</td>
-                            <td>A string representing whether the sample was preserved or destroyed.</td>
+                            <td>replicates</td>
+                            <td>An integer representing the number of replicates generated for this sample.</td>
                         </tr>
                         <tr>
-                            <td>OriginalSample</td>
-                            <td>An integer representing the original sampleID from which the sample is derived. A sample ID of 1 indicates that this sample was collected from an organism without processing.</td>
-                        </tr>
-                        <tr>
-                            <td>Comments</td>
+                            <td>comments</td>
                             <td>A string used as a placeholder for additional comments or notes.</td>
                         </tr>
                     </tbody>

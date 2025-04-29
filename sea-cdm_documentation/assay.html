@@ -34,52 +34,52 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>idAssay</td>
+                                <td>assay_id</td>
                                 <td>An internal ID used to describe an assay type.</td>
                             </tr>
                             <tr>
-                                <td>AssayName</td>
+                                <td>assay_name</td>
                                 <td>A string representing the name of an assay.</td>
                             </tr>
                             <tr>
-                                <td>DocumentationID</td>
-                                <td>An internal id used to identify the reference document describing the process of an assay.</td>
+                                <td>documentation_id</td>
+                                <td>An ID of the documentation table used to identify the reference document describing the process of an assay.</td>
                             </tr>
                             <tr>
-                                <td>SEA Assay Type</td>
-                                <td>A SEA Assay category used to assign the type of SEA Assay it belongs to; Experimental Assay, Statistical Assay, Computational Assay. This classification identifies what kind of parameters are associated with each Assay category.</td>
+                                <td>assay_type</td>
+                                <td>An assay category used to assign the type the assay belongs to. Categories include: Experimental Assay, Statistical Assay, and Computational Assay.</td>
                             </tr>
                             <tr>
-                                <td>SEA ASSAY ID</td>
+                                <td>sea_assay_id</td>
                                 <td>A string representing the OBI ID for which SEA Assay Type it belongs to.</td>
                             </tr>
                             <tr>
-                                <td>AssayTypeID</td>
+                                <td>assay_type_id</td>
                                 <td>A string representing the OBI ID for an assay.</td>
                             </tr>
                             <tr>
-                                <td>Organism</td>
-                                <td>A binary integer representing if an assay necessarily involves an organism.</td>
+                                <td>organism</td>
+                                <td>A binary integer indicating if an assay necessarily involves an organism.</td>
                             </tr>
                             <tr>
-                                <td>Reagents</td>
-                                <td>A list of material IDs that are used as an input by an assay that are consumed by the process. This is used for experimental assays.</td>
+                                <td>reagents</td>
+                                <td>A list of material IDs used as inputs by an assay that are consumed in the process (Experimental assays only).</td>
                             </tr>
                             <tr>
-                                <td>Platform</td>
-                                <td>A list of material IDs that are used as an input by an assay that are not consumed by the process. This is used for experimental assays.</td>
+                                <td>platform</td>
+                                <td>A list of material IDs used as inputs by an assay that are not consumed (Experimental assays only).</td>
                             </tr>
                             <tr>
-                                <td>Parameters</td>
-                                <td>A list of hyperparameters that are used as the input for an assay. Paired with hyperparameter values.</td>
+                                <td>parameters</td>
+                                <td>A list of hyperparameters used as input for the assay. Should be paired with <code>parameter_values</code>.</td>
                             </tr>
                             <tr>
-                                <td>Parameter Values</td>
-                                <td>A list of values used by all hyperparameters.</td>
+                                <td>parameter_values</td>
+                                <td>A list of values corresponding to the hyperparameters listed under <code>parameters</code>.</td>
                             </tr>
                             <tr>
-                                <td>InputData</td>
-                                <td>A string listed the datatypes that are used as inputs for a statistical analysis (or computation analysis). Paired to InputAssayType. Computational assay only.</td>
+                                <td>input_data</td>
+                                <td>A string listing data types used as inputs for statistical or computational analysis. Used only for computational assays.</td>
                             </tr>
                         </tbody>
                     </table>
