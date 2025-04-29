@@ -8,7 +8,6 @@
     <script src="../template.js"></script>
 </head>
 <body>
-    <!-- Navbar will be loaded here -->
     <div id="navbar-container"></div>
     
     <div class="container" style="width: 95%; max-width: none;">
@@ -20,7 +19,9 @@
             <div class="main-content">
                 <h1>Groups</h1>
 
-                <p>A group is defined as a collection of multiple individual instances that share some common experimental features.</p>
+                <p>
+                    A group is defined as a collection of multiple individual instances that share some common experimental features.
+                </p>
                 
                 <h2>Group Properties</h2>
                 
@@ -34,27 +35,27 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>idGroup</td>
+                                <td>group_id</td>
                                 <td>An internal identifier used to identify a specific group.</td>
                             </tr>
                             <tr>
-                                <td>ExperimentID</td>
+                                <td>experiment_id</td>
                                 <td>An integer used to identify an experiment a specific group belongs to.</td>
                             </tr>
                             <tr>
-                                <td>GroupConsistency</td>
+                                <td>composition</td>
                                 <td>A value that describes the nature of the group as a collection of instances for the same organism, multiple experimental replicates, or a heterogeneous group.</td>
                             </tr>
                             <tr>
-                                <td>GroupSize</td>
+                                <td>group_size</td>
                                 <td>A value that stores how many individuals are contained within a group.</td>
                             </tr>
                             <tr>
-                                <td>ForeignID</td>
+                                <td>reference_id</td>
                                 <td>A string used to identify an external reference for the group.</td>
                             </tr>
                             <tr>
-                                <td>ForeignSource</td>
+                                <td>reference_source</td>
                                 <td>A string used to identify the source of the ForeignID.</td>
                             </tr>
                         </tbody>

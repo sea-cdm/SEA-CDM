@@ -19,46 +19,49 @@
             <!-- Main content area -->
             <div class="main-content">
                 <h1>Experiment</h1>
-                <p>A table that represents the experiment as part of the SEA CDM. This table serves as a central node and contains information.</p>
+                <p>
+                    A table that represents the experiment as part of the SEA CDM. This table serves as a central node and contains information. Experiments can include clinical visits within the SEA CDM.
+                </p>
+                
                 <h2>Experiment Properties</h2>
-                <table>
+                <table class="table table-striped table-bordered">
                     <thead>
                         <tr>
-                            <th>Field</th>
+                            <th>Property</th>
                             <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>idExperiment</strong></td>
+                            <td>experiment_id</td>
                             <td>An internal ID that corresponds to an instance of an experiment.</td>
                         </tr>
                         <tr>
-                            <td><strong>StudyID</strong></td>
+                            <td>study_id</td>
                             <td>An ID that corresponds to a study an experiment belongs to.</td>
                         </tr>
                         <tr>
-                            <td><strong>ExperimentControl</strong></td>
+                            <td>experiment_control</td>
                             <td>A binary flag used to indicate if an experiment row is used as part of an experimental control or not.</td>
                         </tr>
                         <tr>
-                            <td><strong>ExperimentType</strong></td>
+                            <td>experiment_type</td>
                             <td>A string used to describe the type of an experiment used. E.g. “vaccine challenge” and “immune response”.</td>
                         </tr>
                         <tr>
-                            <td><strong>ExperimentTypeID</strong></td>
+                            <td>experiment_type_id</td>
                             <td>A string used to match Experiment Type to an ontology ID.</td>
                         </tr>
                         <tr>
-                            <td><strong>ForeignID</strong></td>
-                            <td>A foreign ID used to represent the source of an experiment from another source. Must be paired with Foreign Source.</td>
+                            <td>reference_id</td>
+                            <td>A foreign ID used to represent the source of an experiment from another source. Must be paired with reference_source.</td>
                         </tr>
                         <tr>
-                            <td><strong>ForeignSource</strong></td>
-                            <td>A string representing the Foreign Source for an experiment.</td>
+                            <td>reference_source</td>
+                            <td>A string representing the reference source for an experiment.</td>
                         </tr>
                         <tr>
-                            <td><strong>Comments</strong></td>
+                            <td>comments</td>
                             <td>A string used as a placeholder for extra words.</td>
                         </tr>
                     </tbody>
