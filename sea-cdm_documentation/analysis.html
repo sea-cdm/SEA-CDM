@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assay Documentation</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../template.js"></script>
+</head>
+<body>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+            <!-- Sidebar will be loaded here -->
+            <div id="sidebar-section"></div>
+
+            <!-- Main content area -->
+            <div class="main-content">
+                <h1>Analysis</h1>
+
+                <p>
+                    An analysis is defined as a process which transforms a data result into another data result. This includes the use of computational algorithms and statistical analysis.
+                </p>
+
+                <h2>Analysis Properties</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>analysis_id</td>
+                            <td>A primary key used to identify a specific analysis.</td>
+                        </tr>
+                        <tr>
+                            <td>group_id</td>
+                            <td>A foreign key used to identify a specific group used for an analysis.</td>
+                        </tr>
+                        <tr>
+                            <td>documentation_id</td>
+                            <td>A foreign key providing the <code>documentation_id</code> from the Documentation table that contains the analysis protocol and related information.</td>
+                        </tr>
+                        <tr>
+                            <td>input_data</td>
+                            <td>A string listing the data types that are used as inputs for a statistical analysis.</td>
+                        </tr>
+                        <tr>
+                            <td>input_data_id</td>
+                            <td>A string listing the ontology ID for each <code>input_data</code> class.</td>
+                        </tr>
+                        <tr>
+                            <td>analysis_name</td>
+                            <td>A string representing the name of a type of analysis.</td>
+                        </tr>
+                        <tr>
+                            <td>analysis_name_id</td>
+                            <td>A string providing an ontology identifier for the analysis name.</td>
+                        </tr>
+                        <tr>
+                            <td>reference_id</td>
+                            <td>A string used to identify an external reference for the group.</td>
+                        </tr>
+                        <tr>
+                            <td>reference_source</td>
+                            <td>A string used to identify the source of the <code>reference_id</code>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+</html>

@@ -3,28 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Section 1 - Page 1</title>
+    <title>History of SEA Model</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../template.js"></script>
+    <style>
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-caption {
+            font-weight: bold;
+            margin-top: 8px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar will be loaded here -->
     <div id="navbar-container"></div>
-    
-    <div class="container">
-        <h1>Welcome to Section 1, Page 1</h1>
-        
-        <div class="content">
-            <p>This is the content for Section 1, Page 1.</p>
-            <p>You can add any HTML content here.</p>
+
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+
+            <div class="main-content">
+                <h1>History of SEA Model</h1>
+
+                <p>The SEA Model was first presented at the Vaccine and Drug Ontogy Study 2024 Conference (VDOS 2024). The SEA Model was first intended to be developed along a Vaccine Study Minimal Information Standard (VS-MIS) to identify key variables of a study. The original intent was that each experimental factor could be represented as some part of the SEA Model. This led to development of the “Data-Entity-Variable” (DEV) framework.</p>
+
+                <div class="image-container">
+                    <img src="../img/SEA-model.png" alt="SEA Model Overview" style="max-width: 100%; height: auto;">
+                    <p class="image-caption">Representation of the “Study-Experiment-Assay” model.</p>
+                </div>
+
+                <p>Exp. assay is short for experimental assay.  Variables are linked to either an experiment or assays depending if they are used as inputs (independent variables) or as outputs (dependent variables) for statistical analysis. Figure was taken from VDOS 2024 Huffman et. al.</p>
+
+                <h2>Modeling of the DEV Framework</h2>
+
+                <p>The DEV framework systematically illustrates the relationships among variables, the data associated with them, and the real-world entities they describe. In this ontological model:</p>
+                <ul>
+                    <li><strong>Variables</strong> are statistical entities identified as potentially affecting outcomes.</li>
+                    <li>Variables may be linked to <strong>data items</strong> (for independent variables) or <strong>qualities</strong> being analyzed (for control or dependent variables).</li>
+                    <li>Assays collect data that serve as extrinsic measurements of intrinsic phenomena.</li>
+                </ul>
+
+                <p>It is also possible for a variable to function directly as a data item, depending on the context.</p>
+
+                <div class="image-container">
+                    <img src="../img/dev_modeling.png" alt="DEV Framework" style="max-width: 100%; height: auto;">
+                    <p class="image-caption">Figure 4: DEV Modeling.</p>
+                </div>
+
+                <p>The DEV model clarifies what information is applied to a study:</p>
+                <ul>
+                    <li>For semantic ontology modeling: only real-world entity information is used.</li>
+                    <li>For mechanistic modeling (e.g., gene set enrichment): variables and entities are combined to generate insights.</li>
+                    <li>For machine learning: only measured data are typically used.</li>
+                    <li>Most vaccine study metadata describes specific real-world entities.</li>
+                </ul>
+
+                <p>This model helps distinguish study types and enhances structured representation of biological research.</p>
+            </div>
         </div>
     </div>
-    
-    <!-- Footer will be loaded here -->
+
     <div id="footer-container"></div>
-    
-    <script>
-        setAuthorName('Your Name');
-    </script>
 </body>
 </html>

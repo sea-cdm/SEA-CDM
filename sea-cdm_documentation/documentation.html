@@ -35,11 +35,11 @@
                         <tbody>
                             <tr>
                                 <td>documentation_id</td>
-                                <td>An internal ID used to identify Documentation.</td>
+                                <td>A primary key used to identify a specific documentation for a document as part of the study.</td>
                             </tr>
                             <tr>
                                 <td>study_id</td>
-                                <td>An internal ID used to identify a study that Documentation belongs to.</td>
+                                <td>A foreign key used to identify a study that Documentation belongs to.</td>
                             </tr>
                             <tr>
                                 <td>document_name</td>
@@ -52,6 +52,10 @@
                             <tr>
                                 <td>reference_source</td>
                                 <td>A string used to identify the source of documentation that a reference_id belongs to.</td>
+                            </tr>
+                            <tr>
+                                <td>documentation_type</td>
+                                <td>A string used to represent what the documentation is about; i.e. protocol, paper, results, etc.</td>
                             </tr>
                             <tr>
                                 <td>person_id</td>
