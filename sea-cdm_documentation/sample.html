@@ -19,7 +19,7 @@
             <!-- Main content area -->
             <div class="main-content">
                 <h1>Sample</h1>
-                <p>A sample is the result of an experiment that is collected from an organism and used to generate data. A biosample refers to the tissue or cell culture collected from an organism, while an experimental sample (expsample) is the sample that has been further processed.</p>
+                <p>A sample is the result of an experiment that is collected from an organism and used to generate data. A biosample refers to the tissue or cell culture collected from an organism, while an experimental sample (exp sample) is the sample that has been further processed.</p>
                 
                 <h2>Sample Properties</h2>
                 <table>
@@ -32,11 +32,11 @@
                     <tbody>
                         <tr>
                             <td>sample_id</td>
-                            <td>An internal ID used to identify a specific sample.</td>
+                            <td>An primary id used to identify a specific sample.</td>
                         </tr>
                         <tr>
                             <td>organism_id</td>
-                            <td>For samples that are composed of multiple organisms, a value of ‘0’ is assigned to organism_id and should be queried via group_id.</td>
+                            <td>A foreign id used to identify a specific organism. For samples that are composed of multiple organisms, a value of ‘0’ is assigned to organism_id and should be queried via group_id.</td>
                         </tr>
                         <tr>
                             <td>group_id</td>

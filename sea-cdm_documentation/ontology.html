@@ -20,7 +20,7 @@
             <div class="main-content">
                 <h1>Ontology</h1>
             
-                <p>This table contains a list of all ontologies used for a SEA CDM. Further information is meant to be queried or linked according to work done in SEA CDM.</p>
+                <p>This table contains a list of all ontologies used for a SEA CDM. Ontologies are special form of documentation that is meant to be directly queried by SEA CDM to link IDs to knowledge graphs. Further information is meant to be queried or linked according to work done in SEA CDM.</p>
                 
                 <h2>Ontology Properties</h2>
                 
@@ -34,19 +34,19 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>idOntology</td>
-                                <td>An internal identifier used internally to identify a specific ontology.</td>
+                                <td>ontology_id</td>
+                                <td>A primary key used internally to identify a specific ontology.</td>
                             </tr>
                             <tr>
-                                <td>DocumentationID</td>
-                                <td>An ID used to the documentation ID that contains the ontology to be queried as part of OSEAN.</td>
+                                <td>documentation_id</td>
+                                <td>An foreign key used to identify the Documenation associated with the ontology.</td>
                             </tr>
                             <tr>
-                                <td>OntologyName</td>
+                                <td>ontology_name</td>
                                 <td>A string used to provide the common name that is used as an ontology.</td>
                             </tr>
                             <tr>
-                                <td>OntologyString</td>
+                                <td>ontology_iri</td>
                                 <td>A string used to identify the ontology IRI that is used for terms within a specific ontology.</td>
                             </tr>
                         </tbody>

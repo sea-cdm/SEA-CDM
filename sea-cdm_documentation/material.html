@@ -19,7 +19,7 @@
             <!-- Main content area -->
             <div class="main-content">
                 <h1>Materials</h1>
-                <p>A material is defined as one specific material that is used as part of an experiment or assay process. Material ID needs to be accessed as part of Intervention, Sample, or Assay Tables. Complex materials, such as cocktails, are identified by an ontologyID with their components arising from other data sources.</p>
+                <p>A material is a catch-all to represent any material entity that has a dose used as part of a  material experiment or assay that does not belong within the organism table.</p>
                 
                 <h2>Materials Properties</h2>
 
@@ -32,13 +32,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>idMaterial</td><td>An internal identifier used internally to identify a specific material.</td></tr>
-                            <tr><td>OntologyID</td><td>A string used to identify the material used as an ontology; may be a string of a query used to generate the subclasses instead.</td></tr>
-                            <tr><td>MaterialName</td><td>A string used to name the material.</td></tr>
-                            <tr><td>Organization</td><td>A string used to identify the organization responsible for the materials.</td></tr>
+                            <tr><td>material_id</td><td>A primary key used to identify a specific material.</td></tr>
+                            <tr><td>material_name</td><td>A string used to describe the material name.</td></tr>
+                            <tr><td>material_name_id</td><td>A string used to identify the ontology id that is associated with the material name.</td></tr>
+                            <tr><td>organization</td><td>A string used to identify the organization responsible for the creation or refinement of a material.</td></tr>
                             <tr><td>ForeignID</td><td>A string used to identify an ID that is used for a material within a different database or source.</td></tr>
-                            <tr><td>ForeignSource</td><td>A string used to identify the source for a ForeignID.</td></tr>
-                            <tr><td>Comments</td><td>Placeholder for additional comments.</td></tr>
+                            <tr><td>reference_id</td><td>A string used to identify an external reference for the group.</td></tr>
+                            <tr><td>reference_source</td><td>A string used to identify the source of the ForeignID.</td></tr>
                         </tbody>
                     </table>
                 </div>

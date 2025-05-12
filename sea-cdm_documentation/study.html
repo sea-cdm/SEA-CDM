@@ -31,28 +31,32 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>idStudy</td>
-                                <td>An internal ID used to represent a study.</td>
+                                <td>study_id</td>
+                                <td>A primary key used to represent a study.</td>
                             </tr>
                             <tr>
-                                <td>StudyName</td>
+                                <td>study_name</td>
                                 <td>A string representing the name of a study.</td>
                             </tr>
                             <tr>
-                                <td>StudyType</td>
+                                <td>study_description</td>
+                                <td>A string representing a short description of a study. This is set to 500 characters or less and is intended to illustrate the key question of a study.</td>
+                            </tr>
+                            <tr>
+                                <td>study_type</td>
                                 <td>A string representing the type of a study. This is typically 'Experiment', 'Observation', or 'Metanalysis'.</td>
                             </tr>
                             <tr>
-                                <td>StudyTypeID</td>
+                                <td>study_type_id</td>
                                 <td>An ontology string representing the type of a study.</td>
                             </tr>
                             <tr>
-                                <td>ForeignID</td>
+                                <td>reference_id</td>
                                 <td>A foreign ID used to represent the source of a study from another source. Must be paired with ForeignSource.</td>
                             </tr>
                             <tr>
-                                <td>ForeignSource</td>
-                                <td>A string representing the Foreign Source for a study.</td>
+                                <td>reference_source</td>
+                                <td>A string representing the reference source for a study.</td>
                             </tr>
                             <tr>
                                 <td>Comments</td>
