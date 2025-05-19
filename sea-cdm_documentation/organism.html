@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assay Documentation</title>
+    <title>Organism Documentation</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../template.js"></script>
 </head>
 <body>
     <!-- Navbar will be loaded here -->
     <div id="navbar-container"></div>
-    
+
     <div class="container" style="width: 95%; max-width: none;">
         <div class="page-container">
             <!-- Sidebar will be loaded here -->
             <div id="sidebar-section"></div>
-            
+
             <!-- Main content area -->
             <div class="main-content">
                 <h1>Organism</h1>
-            
-                <p>This table contains a list of all organisms listed in an experiment as part of the SEA CDM. Each organism is listed as an instance within a dataset; the same organism from different studies will not be linked unless there is a connection between foreignIDs.</p>
-                
+
+                <p>
+                    This table contains a list of all organisms listed in an experiment as part of the SEA CDM.
+                    Each organism is listed as an instance within a dataset; the same organism from different studies
+                    will not be linked unless there is a connection between <code>foreign_id</code> values.
+                    An organism is a necessary component for a biological experiment.
+                </p>
+
                 <h2>Organism Properties</h2>
-                
+
                 <div class="table-responsive">
                     <table class="table table-striped table-bordered">
                         <thead>
@@ -34,47 +39,60 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>idOrganism</td>
+                                <td>organism_id</td>
                                 <td>An internal ID that corresponds to an instance of an organism.</td>
                             </tr>
                             <tr>
-                                <td>idGroup</td>
-                                <td>An ID that corresponds to which group an organism belongs to; organisms that do not belong to a group are assigned a group value of 1 (to represent a singleton).</td>
+                                <td>group_id</td>
+                                <td>An internal ID that corresponds to which group an organism belongs to; organisms that do not belong to a group are assigned a group value of 1 (to represent a singleton).</td>
                             </tr>
                             <tr>
-                                <td>OrganismSpecies</td>
+                                <td>organism_species</td>
+                                <td>A string representing the species an organism belongs to; this is a common name that is listed.</td>
+                            </tr>
+                            <tr>
+                                <td>organism_species_id</td>
                                 <td>A string representing the species an organism belongs to; this species is identified as equivalent to “OBI_0100026”.</td>
                             </tr>
                             <tr>
-                                <td>OrganismType</td>
+                                <td>organism_type</td>
                                 <td>A string representing the subtype an organism belongs to; this subtype could correspond to a human race or ethnicity, animal breed, or microbial strain.</td>
                             </tr>
                             <tr>
-                                <td>OrganismTypeID</td>
+                                <td>organism_mutation</td>
+                                <td>A string representing an organism that belongs to have an atypical (to wild type of OrganismRace) mutation.</td>
+                            </tr>
+                            <tr>
+                                <td>organism_type_id</td>
                                 <td>A string representing the ontology ID that corresponds to an OrganismType.</td>
                             </tr>
                             <tr>
-                                <td>OrganismAge</td>
+                                <td>organism_age</td>
                                 <td>A double that represents the organism age; this is the lowest age listed for the instance of an organism. This must be paired with an OrganismAgeUnit and OrganismAgeID.</td>
                             </tr>
                             <tr>
-                                <td>OrganismAgeUnit</td>
+                                <td>organism_age_unit</td>
                                 <td>A string representing the units for an organism's age.</td>
                             </tr>
                             <tr>
-                                <td>OrganismAgeID</td>
-                                <td>A string representing the ontological ID used for OrganismAgeUnit.</td>
+                                <td>organism_age_unit_id</td>
+                                <td>A string representing the ontological ID used for organism_age_unit.</td>
                             </tr>
                             <tr>
-                                <td>OrganismSex</td>
-                                <td>An integer representing an organism’s biological sex. Currently, four values are 0/1/2/3 representing male/female/both/neither.</td>
+                                <td>organism_sex</td>
+                                <td>A string representing an organism’s biological sex. Currently, four values are 0/1/2/3 representing male/female/both/neither.</td>
+                            </tr>
+                            <tr>
+                                <td>organism_sex_id</td>
+                                <td>A string representing the ontological ID used for organism_sex.</td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
             </div>
         </div>
     </div>
-    
+
     <!-- Footer will be loaded here -->
     <div id="footer-container"></div>
 </body>
