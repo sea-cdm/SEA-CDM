@@ -30,32 +30,39 @@
                             <tr>
                                 <th>Property</th>
                                 <th>Description</th>
+                                <th>Usage</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>results_id</td>
                                 <td>An internal ID used to identify assay results in a database.</td>
+                                <td>"RSULT_1"</td>
                             </tr>
                             <tr>
                                 <td>experiment_id</td>
                                 <td>A foreign key used to identify the experiment an assay result is part of.</td>
+                                <td>"EXPER_1"</td>
                             </tr>
                             <tr>
                                 <td>group_id</td>
                                 <td>An ID used to identify the group an assay result is about. Groups that are about individual organisms or samples are given a special ID.</td>
+                                <td>"GROUP_1"</td>
                             </tr>
                             <tr>
                                 <td>sample_id</td>
                                 <td>A foreign key used to identify the sample a result is about. If used for a group, use “1” as placeholder value.</td>
+                                <td>"SAMP_1"</td>
                             </tr>
                             <tr>
                                 <td>organism_id</td>
                                 <td>A foreign key used to identify the organism results is about. If used for a group, use “1” as placeholder value.</td>
+                                <td>"ORGO_1"</td>
                             </tr>
                             <tr>
                                 <td>documenation_id</td>
                                 <td>A foreign key used to identify the document that contains the documentation for the sort.</td>
+                                <td>"DOCU_1"</td>
                             </tr>
                             <tr>
                                 <td>analysis_type</td>
@@ -88,6 +95,7 @@
                             <tr>
                                 <td>file_type</td>
                                 <td>A string used to identify the file type extension the data is stored as (if accessible for computers).</td>
+                                <td>".csv"</td>
                             </tr>
                             <tr>
                                 <td>replications</td>

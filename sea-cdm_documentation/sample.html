@@ -27,32 +27,39 @@
                         <tr>
                             <th>Property</th>
                             <th>Description</th>
+                            <th>Usage</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>sample_id</td>
                             <td>An primary id used to identify a specific sample.</td>
+                            <td>"SAMP_1"</td>
                         </tr>
                         <tr>
                             <td>organism_id</td>
                             <td>A foreign id used to identify a specific organism. For samples that are composed of multiple organisms, a value of ‘0’ is assigned to organism_id and should be queried via group_id.</td>
+                            <td>"ORGO_1"</td>
                         </tr>
                         <tr>
                             <td>group_id</td>
-                            <td>The group of organism instances that data is collected from. For samples from multiple organisms. Single-organism samples use value '0'.</td>
+                            <td>The group of organism instances that data is collected from. This is done for samples that are generated from multiple organisms</td>
+                            <td>"GROUP_1, NULL"</td>
                         </tr>
                         <tr>
                             <td>collection_time</td>
                             <td>A double representing how long from some T0 that an organism was generated.</td>
+                            <td>"3., 14"</td>
                         </tr>
                         <tr>
                             <td>t0_definition</td>
                             <td>A string representing the reference event that collection time is measured to.</td>
+                            <td>"TIme of Administration", "Time of Enrollment"</td>
                         </tr>
                         <tr>
                             <td>collection_time_unit</td>
                             <td>A string representing the unit used for the collection time.</td>
+                            <td>"Day", "Month"</td>
                         </tr>
                         <tr>
                             <td>collection_time_unit_id</td>
@@ -61,14 +68,16 @@
                         <tr>
                             <td>biosample_reference_source</td>
                             <td>A string representing the documentation source for the biosample ontology ID.</td>
+                            <td>"ImmPort"</td>
                         </tr>
                         <tr>
                             <td>biopsample_reference_id</td>
                             <td>A string representing the ID listed by the biosample in the reference source.</td>
                         </tr>
                         <tr>
-                            <td>expsample_id</td>
+                            <td>expsample_type</td>
                             <td>A string representing the type of process a sample was used for (e.g., 'swabbing').</td>
+                            <td>"sc-RNA seq B Cell"</td>
                         </tr>
                         <tr>
                             <td>expsample_type_id</td>
@@ -77,6 +86,7 @@
                         <tr>
                             <td>expsample_reference_source</td>
                             <td>A string representing the documentation source for the expsample ontology ID.</td>
+                            <td>"GEO"</td>
                         </tr>
                         <tr>
                             <td>expsample_reference_id</td>
@@ -85,14 +95,25 @@
                         <tr>
                             <td>biosample_collection</td>
                             <td>A string representing the collection method of the biosample.</td>
+                            <td>"Blood Draw", "Swabbing"</td>
                         </tr>
                         <tr>
                             <td>biosample_collection_id</td>
-                            <td>A string representing the ontology ID for the biosample collection method.</td>
+                            <td>A string representing the ontology id for biosample_collection. method of the sample.</td>
+                        </tr>
+                        <tr>
+                            <td>biosample_type</td>
+                            <td>A string represent the initial tissue or part of organism a biosample is derived from.</td>
+                            <td>"Lung", "Blood"</td>
+                        </tr>
+                        <tr>
+                            <td>biosample_type_id</td>
+                            <td>A string representing the ontology id for biosample_type_id. method of the sample.</td>
                         </tr>
                         <tr>
                             <td>replicates</td>
                             <td>An integer representing the number of replicates generated for this sample.</td>
+                            <td>1</td>
                         </tr>
                         <tr>
                             <td>comments</td>
