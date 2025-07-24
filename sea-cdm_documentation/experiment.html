@@ -29,28 +29,34 @@
                         <tr>
                             <th>Property</th>
                             <th>Description</th>
+                            <th>Usage</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>experiment_id</td>
                             <td>A primary key that corresponds to an instance of an experiment.</td>
+                            <td>"EXPER_1"</td>
                         </tr>
                         <tr>
                             <td>study_id</td>
                             <td>A foreign key that corresponds to a study an experiment belongs to.</td>
+                            <td>"STUDY_1"</td>
                         </tr>
                         <tr>
                             <td>documentation_id</td>
                             <td>A foreign key that corresponds to a document that describes the protocol used as part of this experiment.</td>
+                            <td>"DOCU_1"</td>
                         </tr>
                         <tr>
                             <td>experiment_control</td>
                             <td>A binary flag used to indicate if an experiment row is used as part of an experimental control or not.</td>
+                            <td>"True", "False"</td>
                         </tr>
                         <tr>
                             <td>experiment_type</td>
-                            <td>A string used to describe the type of an experiment. E.g. “vaccine challenge” and “immune response”.</td>
+                            <td>A string used to describe the type of experiment performed.</td>
+                            <td>"Clinical Visit", "Experimental"</td>
                         </tr>
                         <tr>
                             <td>experiment_type_id</td>

@@ -30,20 +30,24 @@
                             <tr>
                                 <th>Property</th>
                                 <th>Description</th>
+                                <th>Usage</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>documentation_id</td>
                                 <td>A primary key used to identify a specific documentation for a document as part of the study.</td>
+                                <td>"DOCU_1"</td>
                             </tr>
                             <tr>
                                 <td>study_id</td>
-                                <td>A foreign key used to identify a study that Documentation belongs to.</td>
+                                <td>A foreign key used to identify a study that documentation belongs to.</td>
+                                <td>"STUDY_1"</td>
                             </tr>
                             <tr>
                                 <td>document_name</td>
                                 <td>A string used to identify the name of a document.</td>
+                                <td>"VIGET: A web portal for study of vaccine-induced host responses based on Reactome pathways and ImmPort data"</td>
                             </tr>
                             <tr>
                                 <td>reference_id</td>
@@ -56,10 +60,16 @@
                             <tr>
                                 <td>documentation_type</td>
                                 <td>A string used to represent what the documentation is about; i.e. protocol, paper, results, etc.</td>
+                                <td>"Protocol", "Research Paper"</td>
+                            </tr>
+                            <tr>
+                                <td>documentation_type_id</td>
+                                <td>A string used to represent the id of the associated document type.</td>
                             </tr>
                             <tr>
                                 <td>person_id</td>
                                 <td>A string used to find a unique identifier of a person (if available) who has a role in the creation of the documentation.</td>
+                                <td>"ORC-ID"</td>
                             </tr>
                             <tr>
                                 <td>person_id_type</td>
@@ -68,22 +78,27 @@
                             <tr>
                                 <td>honorific</td>
                                 <td>A string used to identify an honorific for a person_id.</td>
+                                <td>"Mr."</td>
                             </tr>
                             <tr>
                                 <td>person_name_1</td>
                                 <td>A string used to identify a personal name for a person_id.</td>
+                                <td>"Anthony"</td>
                             </tr>
                             <tr>
                                 <td>person_name_2</td>
                                 <td>A string used to identify a middle name for a person_id.</td>
+                                <td>"Robert"</td>
                             </tr>
                             <tr>
                                 <td>person_name_3</td>
                                 <td>A string used to identify a family name for a person_id.</td>
+                                <td>"Huffman"</td>
                             </tr>
                             <tr>
                                 <td>person_role</td>
                                 <td>An OBI ID used to identify the role a person is involved in, such as an author or corresponding author.</td>
+                                <td>"Author"</td>
                             </tr>
                             <tr>
                                 <td>citation</td>
@@ -92,10 +107,12 @@
                             <tr>
                                 <td>citation_style</td>
                                 <td>A string representing the citation style used for a citation.</td>
+                                <td>"NLM"</td>
                             </tr>
                             <tr>
                                 <td>document_source</td>
                                 <td>A string representing a URL or file source for a document.</td>
+                                <td>"10.3389/fimmu.2023.1141030"</td>
                             </tr>
                         </tbody>
                     </table>
