@@ -29,16 +29,42 @@
                             <tr>
                                 <th>Property</th>
                                 <th>Description</th>
+                                <th>Usage</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>material_id</td><td>A primary key used to identify a specific material.</td></tr>
-                            <tr><td>material_name</td><td>A string used to describe the material name.</td></tr>
-                            <tr><td>material_name_id</td><td>A string used to identify the ontology id that is associated with the material name.</td></tr>
-                            <tr><td>organization</td><td>A string used to identify the organization responsible for the creation or refinement of a material.</td></tr>
-                            <tr><td>ForeignID</td><td>A string used to identify an ID that is used for a material within a different database or source.</td></tr>
-                            <tr><td>reference_id</td><td>A string used to identify an external reference for the group.</td></tr>
-                            <tr><td>reference_source</td><td>A string used to identify the source of the ForeignID.</td></tr>
+                            <tr>
+                                <td>material_id</td>
+                                <td>A primary key used to identify a specific material.</td>
+                                <td>"MATE_1"</td>
+                            </tr>
+                            <tr>
+                                <td>material_name</td>
+                                <td>A string used to describe the material name.</td>
+                                <td>"Fluzone", "Tamoxifen"</td>
+                            </tr>
+                            <tr>
+                                <td>material_name_id</td>
+                                <td>A string used to identify the ontology id that is associated with the material name.</td>
+                                <td>"VO:00000064"</td>
+                            </tr>
+                            <tr>
+                                <td>organization</td>
+                                <td>A string used to identify the organization responsible for the creation or refinement of a material.</td>
+                                <td>"Pfizer"</td>
+                            </tr>
+                            <tr>
+                                <td>ForeignID</td>
+                                <td>A string used to identify an ID that is used for a material within a different database or source.</td>
+                            </tr>
+                            <tr>
+                                <td>reference_id</td>
+                                <td>A string used to identify an external reference for the group.</td>
+                            </tr>
+                            <tr>
+                                <td>reference_source</td>
+                                <td>A string used to identify the source of the reference_id.</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

@@ -31,36 +31,47 @@
                         <tr>
                             <th>Property</th>
                             <th>Description</th>
+                            <th>Usage</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>analysis_id</td>
                             <td>A primary key used to identify a specific analysis.</td>
+                            <td>"ANLYS_1"</td>
                         </tr>
                         <tr>
                             <td>group_id</td>
                             <td>A foreign key used to identify a specific group used for an analysis.</td>
+                            <td>"GROUP_1"</td>
                         </tr>
                         <tr>
                             <td>documentation_id</td>
                             <td>A foreign key providing the <code>documentation_id</code> from the Documentation table that contains the analysis protocol and related information.</td>
+                            <td>"DOCU_1"</td>
                         </tr>
                         <tr>
                             <td>input_data</td>
                             <td>A string listing the data types that are used as inputs for a statistical analysis.</td>
+                            <td>"VIGET"</td>
                         </tr>
                         <tr>
                             <td>input_data_id</td>
                             <td>A string listing the ontology ID for each <code>input_data</code> class.</td>
                         </tr>
                         <tr>
+                            <td>file_access</td>
+                            <td>A string listing the download link needed to access the file for the input data.</td>
+                        </tr>
+                        <tr>
                             <td>analysis_name</td>
                             <td>A string representing the name of a type of analysis.</td>
+                            <td>"LIMMA"</td>
                         </tr>
                         <tr>
                             <td>analysis_name_id</td>
                             <td>A string providing an ontology identifier for the analysis name.</td>
+                            <td>"EFO_0001456"</td>
                         </tr>
                         <tr>
                             <td>reference_id</td>

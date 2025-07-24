@@ -30,36 +30,43 @@
                             <tr>
                                 <th>Property</th>
                                 <th>Description</th>
+                                <th>Usage</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>assay_id</td>
                                 <td>An internal ID used to describe an assay type.</td>
-                            </tr>
-                            <tr>
-                                <td>assay_name</td>
-                                <td>A string representing the name of an assay.</td>
+                                <td>"ASSAY_1"</td>
                             </tr>
                             <tr>
                                 <td>documentation_id</td>
-                                <td>An ID of the documentation table used to identify the reference document describing the process of an assay.</td>
+                                <td>An id of the documentation table used to identify the reference document describing the process of an assay.</td>
+                                <td>"DOCU_1"</td>
+                            </tr>
+                            <tr>
+                                <td>assay_name</td>
+                                <td>A string representing the name of an assay; this specifies a general type of features.</td>
+                                <td>"Blood.RNA-Microarray"</td>
                             </tr>
                             <tr>
                                 <td>assay_type</td>
                                 <td>An assay category used to assign the type of the assay it belongs to.  This is used to describe measurement or observation or survey.</td>
+                                <td>"Experimental Assay", "Observation"</td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td>sea_assay_id</td>
                                 <td>A string representing the OBI ID for which SEA Assay Type it belongs to.</td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <td>assay_type_id</td>
                                 <td>A string representing the OBI ID for an assay.</td>
+                                <td>"ECO_0000097"</td>
                             </tr>
                             <tr>
                                 <td>organism</td>
-                                <td>A binary value indicating if an assay necessarily involves an organism.</td>
+                                <td>A binary value indicating if an assay necessarily involves an organism as a specimen for an assay, instead of just using a sample.</td>
+                                <td>True, False</td>
                             </tr>
                             <tr>
                                 <td>reagents</td>
