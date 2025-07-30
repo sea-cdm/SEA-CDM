@@ -12,7 +12,7 @@
             margin-top: 20px;
         }
         .image-caption {
-            font-weight: bold;
+            /* font-weight: bold; */
             margin-top: 8px;
         }
     </style>
@@ -29,37 +29,48 @@
                 <p>The SEA Model was first presented at the Vaccine and Drug Ontology Study 2024 Conference (VDOS 2024). The SEA Model was first intended to be developed along a Vaccine Study Minimal Information Standard (VS-MIS) to identify key variables of a study. The original intent was that each experimental factor could be represented as some part of the SEA Model. This led to development of the “Data-Entity-Variable” (DEV) framework.</p>
 
                 <div class="image-container">
-                    <img src="../img/SEA-model.png" alt="SEA Model Overview" style="max-width: 100%; height: auto;">
-                    <p class="image-caption">Representation of the “Study-Experiment-Assay” model.</p>
+                    <img src="../img/SEA-model.png" alt="Representation of the “Study-Experiment-Assay” model" style="max-width: 100%; height: auto;">
+                    <p class="image-caption"><strong>Figure 1. Representation of the “Study-Experiment-Assay” model.</strong> 
+                        <br>
+                        Exp. assay is short for experimental assay.  Variables are linked to either an experiment or assays depending if they are used as inputs (independent variables) or as outputs (dependent variables) for statistical analysis. Figure was taken from VDOS 2024 Huffman et. al.</p>
                 </div>
 
-                <p>Exp. assay is short for experimental assay.  Variables are linked to either an experiment or assays depending if they are used as inputs (independent variables) or as outputs (dependent variables) for statistical analysis. Figure was taken from VDOS 2024 Huffman et. al.</p>
+                <p>Later expansion and development of the SEA model was done to spin off key components of the Experiment and Assay classes. The Experiment Class was split into the Experiment and Intervention classes. The Experiment class represents the different planned visits and experimental visits and documentation of such events. The Intervention Class details the mechanistic exposure that an Experimental Organism is exposed to. Similarly, the Assay category was split into the Experimental Assay and Statistical Assay classes. Many studies process the raw data of an assay to generate further Result Data, such as gene expression assays being used for functional analysis. The Experimental Assay class, strictly speaking, is any process that generates data, even if it is just via observation. The Statistical class, in contrast, deals with result data about multiple organisms or samples to generate new results. </p>
+
+                <p>Following the changes in Assay categories, the Experimental Organism class underwent changes to better standardize its related experimental factors. To account for this split, the Experimental Organism was split for information about an individual Organism class and a Group class that contains multiple organisms that share some shared category, such as samples affected by a batch effect, that is used for an Statistical Analysis. The experimental factors of an Experimental Organism  were parceled out into Organism and Occurrence. The new Organism class contains experimental factors that are inherent traits of an organism. The Occurrence class, in contrast, contains different diseases or processes that an Organism was involved in that are experimentally relevant.</p>
+
+                <p>Additionally, three new reference classes were included in SEA-CDM. These are the Material class, Documentation Class, and Ontology Class. The material class contains unique IDs of different materials used as part of a Study, Experiment, or Assay. The Documentation class contains the file links for different documents (and associated authors) found within SEA-CDM. The Ontology data contains information for the different ontologies used for variables found in each SEA-CDM class. This led to the following SEA-CDM model to be presented at DRKB 2025 and ISMB 2025.</p>
+
+
+                <div class="image-container">
+                    <img src="../img/early_model.png" alt="Representation of early SEA-CDM model" style="max-width: 100%; height: auto;">
+                    <p class="image-caption"><strong>Figure 2. Representation of early SEA-CDM model. </strong> 
+                        <br>
+                        The core six classes have been expanded into 10 core classes representing the process and three auxiliary classes that are used to identify the materials and documents needed as reference material and documents for different entries.</p>
+                </div>
+
+                <p>This model was further changed following confusion over the two assay categories. The Statistical Assay class was renamed to Analysis, along with the relationships between different classes changed to account for better understanding of events, which is found on the current web page.</p>
 
                 <h2>Modeling of the DEV Framework</h2>
 
-                <p>The DEV framework systematically illustrates the relationships among variables, the data associated with them, and the real-world entities they describe. In this ontological model:</p>
-                <ul>
-                    <li><strong>Variables</strong> are statistical entities identified as potentially affecting outcomes.</li>
-                    <li>Variables may be linked to <strong>data items</strong> (for independent variables) or <strong>qualities</strong> being analyzed (for control or dependent variables).</li>
-                    <li>Assays collect data that serve as extrinsic measurements of intrinsic phenomena.</li>
-                </ul>
+                <p>The DEV framework that systematically illustrates the relations among variables, the measured data associated with the variables, and the real-world entities associated with the data. Specifically, variables, data items, and real-world entities are three different types of entities in an ontological sense.  The variable is a statistical entity that is identified to possibly affect the experimental outcomes. A variable can refer to (i.e., is_about) a specific data item (for independent variables) or a quality that is being statistically analyzed (for either control or dependent variables) (Figure 3). These variables are either recorded as independent variables as part of the experiment or as the dependent variables that are measured by an assay. The data collected by an assay represents an extrinsic measurement of an intrinsic phenomena of reality. However, it is possible for a variable to function as a data item. </p>
+            
 
                 <p>It is also possible for a variable to function directly as a data item, depending on the context.</p>
 
                 <div class="image-container">
                     <img src="../img/dev_modeling.png" alt="DEV Framework" style="max-width: 100%; height: auto;">
-                    <p class="image-caption">Figure 4: DEV Modeling.</p>
+                    <p class="image-caption">Figure 3: DEV Modeling.</p>
                 </div>
 
-                <p>The DEV model clarifies what information is applied to a study:</p>
-                <ul>
-                    <li>For semantic ontology modeling: only real-world entity information is used.</li>
-                    <li>For mechanistic modeling (e.g., gene set enrichment): variables and entities are combined to generate insights.</li>
-                    <li>For machine learning: only measured data are typically used.</li>
-                    <li>Most vaccine study metadata describes specific real-world entities.</li>
-                </ul>
+                <p>The DEV model is meant to clarify what information is being applied to a study. For semantic ontology modeling, only information related to the real-world entities are listed. When this annotation is used to augment mechanistic modeling, such as gene set enrichment mechanisms, or to identify statistically relevant variables within studies, then variables and real-world entities are integrated together to generate new scientific insights. If the information is being fed into a machine-learning based algorithm or classifier, then only the measured data is being used. Similarly, most metadata about  vaccine studies are data about specific real-world entities. As such, this clarification provides useful distinctions between different study types.</p>
 
-                <p>This model helps distinguish study types and enhances structured representation of biological research.</p>
+                <p>An example of DEV modeling exists for different vaccine challenge study modeling. </p>
+
+                <div class="image-container">
+                    <img src="../img/other_dev.png" alt="Other DEV Framework" style="max-width: 100%; height: auto;">
+                    <p class="image-caption"></p>
+                </div>
             </div>
         </div>
     </div>
