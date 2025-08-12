@@ -8,6 +8,8 @@ SEA-CDM was initiated by He Lab in the University of Michigan Medical School, An
 SEA CDM web home: 
 https://sea-cdm.github.io/SEA-CDM/index.html
 
+SEA CDM Documentation home: https://sea-cdm.github.io/SEA-CDM/sea-cdm_documentation/index.html 
+
 
 ## SEA-CDM Documentation  
 
