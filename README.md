@@ -9,3 +9,30 @@ The SEA CDM relational database tables and columns are defined on:  [https://sea
 - https://sea-cdm.github.io/SEA-CDM/index.html**
 - **
 
+
+## Developers 
+
+... 
+
+
+
+## Links in the SEA-CDM repositories 
+We have tested SEA-CDM associated MySQL in three use cases: 
+- VIGET DB use case ...
+- ImmPort DB use case: .. link
+- CellxGene DB use case: 
+
+
+## ETLs
+
+ETL:
+
+## PELAGIC 
+
+PELAGIC ... 
+
+### Tracker link:  
+https://github.com/sea-cdm/SEA-CDM/issues 
+
+
+
