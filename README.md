@@ -18,12 +18,16 @@ The SEA CDM relational database tables and columns are defined on:  [https://sea
 Related links: 
 - Home page of SEA CDM Documentation: https://sea-cdm.github.io/SEA-CDM/sea-cdm_documentation/index.html 
 - https://sea-cdm.github.io/SEA-CDM/index.html
-- **
-
+- Github Organization: https://github.com/sea-cdm
+    - Repositories:
+        - SEA-CDM (Repository mainly on the documentation): https://github.com/sea-cdm/SEA-CDM
+        - OSEAN-DB (Repository on OSEAN Database): https://github.com/sea-cdm/OSEAN-DB
+        - OSEAN-KG (Repository on OSEAN Database in Knowledge Graph format): https://github.com/sea-cdm/OSEAN-KG
 
 ## Developers 
-... 
-
+- Anthony Huffman
+- Feng-Yu (Leo) Yeh
+- Yongqun "Oliver" He
 
 ## Links in the SEA-CDM repositories 
 We have tested SEA-CDM associated MySQL in three use cases: 
