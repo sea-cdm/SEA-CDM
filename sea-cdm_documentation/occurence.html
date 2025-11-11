@@ -49,9 +49,9 @@
                                 <td>"Diabetes", "Fever", "Influenza"</td>
                             </tr>
                             <tr>
-                                <td>occurrence_ID</td>
+                                <td>occurrence_id</td>
                                 <td>A string that lists the ontology ID used to identify an occurrence.</td>
-                                <!-- <td>"OCC_001", "OCC_002"</td> -->
+                                <td>DOID_0081062, OAE_0000361, DOID_8469</td>
                             </tr>
                             <tr>
                                 <td>occurrence_severity</td>
@@ -62,6 +62,11 @@
                                 <td>occurence_t0</td>
                                 <td>A string used to identify the time 0 reference for onset study.</td>
                                 <td>“Organism age”, “Time of enrollment”, “Time of administration”</td>
+                            </tr>
+                            <tr>
+                                <td>occurence_to_id</td>
+                                <td>A string used to identify the event for Intervention_t0</td>
+                                <!-- <td>“Organism age”, “Time of enrollment”, “Time of administration”</td> -->
                             </tr>
                             <tr>
                                 <td>occurrence_onset</td>
@@ -75,12 +80,22 @@
                             </tr>
                             <tr>
                                 <td>occurrence_onset_unit_id</td>
-                                <td>A string used to identify the ontology ID for TimeUnit.</td>
+                                <td>A string used to identify the ontology ID for occurence_onset_unit_id.</td>
+                                <td>"UO_000035"</td>
+                            </tr>
+                            <tr>
+                                <td>occurrence_end</td>
+                                <td>A double that lists the end of an occurrence for an organism.</td>
+                                <td>"-1", "7"</td>
+                            </tr>
+                            <tr>
+                                <td>occurrence_end_id</td>
+                                <td>A string used to identify the ontology ID for occurence_end_unit_id.</td>
                                 <td>"UO_000035"</td>
                             </tr>
                             <tr>
                                 <td>reference_id</td>
-                                <td>A string that corresponds to the occurrence’s ID in another dataset. Must be matched with ForeignSource.</td>
+                                <td>A string that corresponds to the occurrence's ID in another dataset. Must be matched with ForeignSource.</td>
                                 <td>"ADVR00001"</td>
                             </tr>
                             <tr>

@@ -67,15 +67,17 @@
                             <tr>
                                 <td>dosage_unit_id</td>
                                 <td>An integer used to identify the unit ID mapped to the dosage.</td>
+                                <td>IAO_0000003</td>
                             </tr>
                             <tr>
-                                <td>route</td>
+                                <td>intervention_route</td>
                                 <td>A string used to identify the route of administration for an experiment intervention.</td>
                                 <td>"Intranasal", "Intravenous"</td>
                             </tr>
                             <tr>
-                                <td>route_id</td>
+                                <td>intervention_route_id</td>
                                 <td>A string used to identify the ontology ID for route.</td>
+                                <td>VO_0000574, BFO_0000049</td>
                             </tr>
                             <tr>
                                 <td>t0_definition</td>
@@ -95,6 +97,17 @@
                             <tr>
                                 <td>time_unit_id</td>
                                 <td>A string used to identify the ontology ID for time_unit.</td>
+                                <td>UO_000003</td>
+                            </tr>
+                            <tr>
+                                <td>reference_id</td>
+                                <td>A string that corresponds to the intervention’s ID in another dataset. Must be matched with ForeignSource.</td>
+                                <td>IMM00001</td>
+                            </tr>
+                            <tr>
+                                <td>reference_source_id</td>
+                                <td>A string identifier that corresponds to the data source of the corresponding ForeignID.</td>
+                                <td>ImmPort</td>
                             </tr>
                             <tr>
                                 <td>comments</td>

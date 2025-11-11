@@ -51,7 +51,7 @@
                             </tr>
                             <tr>
                                 <td>sample_id</td>
-                                <td>A foreign key used to identify the sample a result is about. If used for a group, use “1” as placeholder value.</td>
+                                <td>A foreign key used to identify the sample result is about. If used for a group, use “1” as placeholder value. </td>
                                 <td>"SAMP_1"</td>
                             </tr>
                             <tr>
@@ -61,36 +61,43 @@
                             </tr>
                             <tr>
                                 <td>documenation_id</td>
-                                <td>A foreign key used to identify the document that contains the documentation for the sort.</td>
+                                <td>An foreign key used to identify the document that contains the documentation for the sort.</td>
                                 <td>"DOCU_1"</td>
                             </tr>
                             <tr>
                                 <td>analysis_type</td>
                                 <td>A string used to identify the current analysis used to generate a result.</td>
+                                <td>Observation, Statistical-Analysis</td>
                             </tr>
                             <tr>
                                 <td>original_assay_type</td>
                                 <td>A string used to identify the original assay type used to generate an assay. This is always an experimental assay.</td>
+                                <td>“Blood.RNA Assay”, “Sequence feature detection assay”</td>
                             </tr>
                             <tr>
                                 <td>original_assay_type_ID</td>
                                 <td>An ID used to identify the assay ID that an AssayType or OriginalAssayType is part of.</td>
+                                <td>OBI_0000433, OBI_0000070</td>
                             </tr>
                             <tr>
                                 <td>datatype</td>
                                 <td>A string used to identify the type of data the results is; either numeric, qualitative, etc.</td>
+                                <td>'Text', 'Figure', 'Image', 'Tensor'</td>
                             </tr>
                             <tr>
                                 <td>datatype_ID</td>
                                 <td>An ontology ID that corresponds to the Datatype.</td>
+                                <td>IAO_0000101, IAO_0000030</td>
                             </tr>
                             <tr>
                                 <td>data_size</td>
                                 <td>A string used to identify the size of a document. Currently used as a string due to variable size from matrices or hierarchical data.</td>
+                                <td>“9000”, “402x27”, “305x25x200”</td>
                             </tr>
                             <tr>
                                 <td>file_access</td>
                                 <td>A string used to identify the location or web link the results file is located. This is analogous to reference_source in other values.</td>
+                                <td>“https://zenodo.org/records/7407195”</td>
                             </tr>
                             <tr>
                                 <td>file_type</td>
@@ -100,6 +107,10 @@
                             <tr>
                                 <td>replications</td>
                                 <td>An integer that lists how many times an analysis is repeated to generate data; multiple measurements.</td>
+                            </tr>
+                            <tr>
+                                <td>comments</td>
+                                <!-- <td>A string used to identify extra information about a result.</td> -->
                             </tr>
                         </tbody>
                     </table>

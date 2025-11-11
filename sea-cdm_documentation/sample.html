@@ -47,14 +47,19 @@
                             <td>"GROUP_1, NULL"</td>
                         </tr>
                         <tr>
-                            <td>collection_time</td>
-                            <td>A double representing how long from some T0 that an organism was generated.</td>
-                            <td>"3., 14"</td>
+                            <td>biosample_collection</td>
+                            <td>A string representing the collection method of the sample.</td>
+                            <td>“Blood Draw”, “Swabbing”</td>
                         </tr>
                         <tr>
-                            <td>t0_definition</td>
-                            <td>A string representing the reference event that collection time is measured to.</td>
-                            <td>"TIme of Administration", "Time of Enrollment"</td>
+                            <td>biosample_collection_id</td>
+                            <td>A string representing the ontology id for biosample_collection. method of the sample.</td>
+                            <!-- <td>“Blood Draw”, “Swabbing”</td> -->
+                        </tr>
+                        <tr>
+                            <td>collection_time</td>
+                            <td>A double representing how long from some T0 that an organism was generated.</td>
+                            <td>3., 14</td>
                         </tr>
                         <tr>
                             <td>collection_time_unit</td>
@@ -63,43 +68,16 @@
                         </tr>
                         <tr>
                             <td>collection_time_unit_id</td>
-                            <td>A string representing the ontology ID for the collection_time_unit.</td>
+                            <td>A string representing the ID listed by the collection_time_unit in the reference source.</td>
                         </tr>
                         <tr>
-                            <td>biosample_reference_source</td>
-                            <td>A string representing the documentation source for the biosample ontology ID.</td>
-                            <td>"ImmPort"</td>
+                            <td>t0_definition</td>
+                            <td>A string representing the reference event that collection time is measured to.</td>
+                            <td>"TIme of Administration", "Time of Enrollment"</td>
                         </tr>
                         <tr>
-                            <td>biopsample_reference_id</td>
-                            <td>A string representing the ID listed by the biosample in the reference source.</td>
-                        </tr>
-                        <tr>
-                            <td>expsample_type</td>
-                            <td>A string representing the type of process a sample was used for (e.g., 'swabbing').</td>
-                            <td>"sc-RNA seq B Cell"</td>
-                        </tr>
-                        <tr>
-                            <td>expsample_type_id</td>
-                            <td>A string representing the ontological ID listed by the expsample type.</td>
-                        </tr>
-                        <tr>
-                            <td>expsample_reference_source</td>
-                            <td>A string representing the documentation source for the expsample ontology ID.</td>
-                            <td>"GEO"</td>
-                        </tr>
-                        <tr>
-                            <td>expsample_reference_id</td>
-                            <td>A string representing the ID listed by the expsample in the reference source.</td>
-                        </tr>
-                        <tr>
-                            <td>biosample_collection</td>
-                            <td>A string representing the collection method of the biosample.</td>
-                            <td>"Blood Draw", "Swabbing"</td>
-                        </tr>
-                        <tr>
-                            <td>biosample_collection_id</td>
-                            <td>A string representing the ontology id for biosample_collection. method of the sample.</td>
+                            <td>t0_definition_id</td>
+                            <td>A string representing the ontology ID for t0_definition.</td>
                         </tr>
                         <tr>
                             <td>biosample_type</td>
@@ -109,12 +87,41 @@
                         <tr>
                             <td>biosample_type_id</td>
                             <td>A string representing the ontology id for biosample_type_id. method of the sample.</td>
+                            <td>OBI_0001479</td>
                         </tr>
                         <tr>
+                            <td>biopsample_reference_id</td>
+                            <td>A string representing the ID listed by the biosample in the reference source.</td>
+                        </tr>
+                        <tr>
+                            <td>biosample_reference_source</td>
+                            <td>A string representing the documentation source for the biosample ontology ID.</td>
+                            <td>"ImmPort"</td>
+                        </tr>
+                        <tr>
+                            <td>expsample_type</td>
+                            <td>A string representing the type of process a sample was used for (e.g., 'swabbing').</td>
+                            <td>"sc-RNA seq B Cell"</td>
+                        </tr>
+                        <tr>
+                            <td>expsample_type_id</td>
+                            <td>A string representing the ontological ID listed by expsample type.</td>
+                            <td>OBI_0000953</td>
+                        </tr>
+                        <tr>
+                            <td>expsample_reference_id</td>
+                            <td>A string representing the ID listed by the expsample in the reference id.</td>
+                        </tr>
+                        <tr>
+                            <td>expsample_reference_source</td>
+                            <td>A string representing the documentation source for the expsample ontology ID.</td>
+                            <td>"GEO"</td>
+                        </tr>
+                        <!-- <tr>
                             <td>replicates</td>
                             <td>An integer representing the number of replicates generated for this sample.</td>
                             <td>1</td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <td>comments</td>
                             <td>A string used as a placeholder for additional comments or notes.</td>
