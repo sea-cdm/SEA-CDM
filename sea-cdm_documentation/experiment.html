@@ -61,10 +61,20 @@
                         <tr>
                             <td>experiment_type_id</td>
                             <td>A string used to match <code>experiment_type</code> to an ontology ID.</td>
-                            <td>"OBI_0500000"</td>
+                            <td>“OBI_0500001” (clinical study design), “OBI_0500000” (study design)</td>
                         </tr>
                         <tr>
-                            <td>reference_id</td>
+                            <td>experiment_subject</td>
+                            <td>A string used to represent the type of subject used for an experiment.</td>
+                            <td>Human, cell line</td>
+                        </tr>
+                        <tr>
+                            <td>experiment_subject</td>
+                            <td>A string used to match experiment_subject to an ontology_id.</td>
+                            <td>“NCBI_Taxon9606” (human), “CLO_0000031” (cell line)</td>
+                        </tr>
+                        <tr>
+                            <td>reference_source_id</td>
                             <td>A foreign ID used to represent the source of an experiment from another source. Must be paired with <code>reference_source</code>.</td>
                             <td>"ARM_0000002"</td>
                         </tr>
