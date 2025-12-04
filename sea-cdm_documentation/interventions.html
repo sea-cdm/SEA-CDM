@@ -45,69 +45,84 @@
                                 <td>"EXPER_1"</td>
                             </tr>
                             <tr>
-                                <td>organism_id</td>
-                                <td>A foreign key that is used to link an experimental intervention to an Organism.</td>
+                                <td>subject_id</td>
+                                <td>A foreign key that is used to link an experimental intervention to a Subject.</td>
                                 <td>"ORGO_1"</td>
                             </tr>
                             <tr>
                                 <td>material</td>
                                 <td>A string used to identify the material used as part of an intervention.</td>
-                                <td>"Influenza vaccine", "yellow fever virus", "Tamoxifen"</td>
+                                <td>"Afluria", "Tamoxifen"</td>
+                            </tr>
+                            <tr>
+                                <td>material_name_id</td>
+                                <td>A string used to identify the ontology id that is associated with the material name.</td>
+                                <td>“VO_0000006” (Afluria), “CHEBI_41774” (Tamoxifen)</td>
                             </tr>
                             <tr>
                                 <td>dosage</td>
-                                <td>A string used to identify the dosage used of a material given to an organism.</td>
-                                <td>2</td>
+                                <td>A string used to identify the dosage used of a material given to an experimental subject.</td>
+                                <td>0.25</td>
                             </tr>
                             <tr>
                                 <td>dosage_unit</td>
                                 <td>A double used to identify the unit of a dosage.</td>
-                                <td>"cc", "ml"</td>
+                                <td>"mL"</td>
                             </tr>
                             <tr>
                                 <td>dosage_unit_id</td>
-                                <td>An integer used to identify the unit ID mapped to the dosage.</td>
-                                <td>IAO_0000003</td>
+                                <td>An integer used to identify the unitID mapped to the dosage.</td>
+                                <td>“UO_0000098” (milliliter)</td>
+                            </tr>
+                            <tr>
+                                <td>intervention_type</td>
+                                <td>A string used to identify the type of intervention.</td>
+                                <td>"vaccination"</td>
+                            </tr>
+                            <tr>
+                                <td>intervention_type_id</td>
+                                <td>A string used to identify the ontology ID for route.</td>
+                                <td>"VO_0000002"</td>
                             </tr>
                             <tr>
                                 <td>intervention_route</td>
                                 <td>A string used to identify the route of administration for an experiment intervention.</td>
-                                <td>"Intranasal", "Intravenous"</td>
+                                <td>"Intravenous"</td>
                             </tr>
                             <tr>
                                 <td>intervention_route_id</td>
-                                <td>A string used to identify the ontology ID for route.</td>
-                                <td>VO_0000574, BFO_0000049</td>
+                                <td>A string used to identify the ontology ID for intervention_route.</td>
+                                <td>“VO_0000574” (intravenous)</td>
                             </tr>
                             <tr>
                                 <td>t0_definition</td>
                                 <td>A string used to identify when T0 is given for intervention.</td>
-                                <td>"Time of administration", "Time of study"</td>
+                                <td>"Time of administration"</td>
                             </tr>
                             <tr>
-                                <td>intervention_start</td>
+                                <td>intervention_time</td>
                                 <td>A double used to identify how long after the start of T0 an intervention occurred.</td>
-                                <td>7</td>
+                                <td>7.0</td>
                             </tr>
                             <tr>
                                 <td>time_unit</td>
-                                <td>A string used to identify the unit for intervention_start.</td>
-                                <td>"Day", "Month"</td>
+                                <td>A string used to identify the unit for intervention_time.</td>
+                                <td>"Day"</td>
                             </tr>
                             <tr>
                                 <td>time_unit_id</td>
                                 <td>A string used to identify the ontology ID for time_unit.</td>
-                                <td>UO_000003</td>
-                            </tr>
-                            <tr>
-                                <td>reference_id</td>
-                                <td>A string that corresponds to the intervention’s ID in another dataset. Must be matched with ForeignSource.</td>
-                                <td>IMM00001</td>
+                                <td>UO_0000036</td>
                             </tr>
                             <tr>
                                 <td>reference_source_id</td>
-                                <td>A string identifier that corresponds to the data source of the corresponding ForeignID.</td>
-                                <td>ImmPort</td>
+                                <td>A string used to identify an external reference for the group.</td>
+                                <td>IMM00001</td>
+                            </tr>
+                            <tr>
+                                <td>reference_source</td>
+                                <td>A string used to identify the source of the reference_source_id.</td>
+                                <td>"ImmPort"</td>
                             </tr>
                             <tr>
                                 <td>comments</td>

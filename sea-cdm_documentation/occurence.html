@@ -39,67 +39,57 @@
                                 <td>"OCCUR_1"</td>
                             </tr>
                             <tr>
-                                <td>organism_id</td>
-                                <td>An identifier that maps to an organism.</td>
+                                <td>subject_id</td>
+                                <td>An identifier that maps to an experimental subject.</td>
                                 <td>"ORGO_1"</td>
                             </tr>
                             <tr>
                                 <td>occurrence_name</td>
                                 <td>A string that lists the reported summary of an occurrence.</td>
-                                <td>"Diabetes", "Fever", "Influenza"</td>
+                                <td>"Fever", "Influenza"</td>
                             </tr>
                             <tr>
-                                <td>occurrence_id</td>
+                                <td>occurrence_name_id</td>
                                 <td>A string that lists the ontology ID used to identify an occurrence.</td>
-                                <td>DOID_0081062, OAE_0000361, DOID_8469</td>
+                                <td>“HP_0001945”, “DOID_8469”</td>
                             </tr>
                             <tr>
                                 <td>occurrence_severity</td>
-                                <td>An integer that corresponds to the severity of an occurrence using the Common Terminology for Adverse Events (CTCAE). Benign occurrences are rated as 0.</td>
-                                <td>0, 1, 2, 3, 4, 5</td>
+                                <td>An integer that corresponds to the severity of an occurrence similar to the scale used by the Common Terminology for Adverse Events (CTCAE). Benign occurrences are rated as 0.</td>
+                                <td>“0”, “1”, “2”, “3”, “4”, “5”</td>
                             </tr>
                             <tr>
-                                <td>occurence_t0</td>
-                                <td>A string used to identify the time 0 reference for onset study.</td>
-                                <td>“Organism age”, “Time of enrollment”, “Time of administration”</td>
+                                <td>occurence_onset_date</td>
+                                <td>A string used to identify the reference date for onset study.</td>
+                                <td>“07-01-2025”</td>
                             </tr>
                             <tr>
-                                <td>occurence_to_id</td>
-                                <td>A string used to identify the event for Intervention_t0</td>
-                                <!-- <td>“Organism age”, “Time of enrollment”, “Time of administration”</td> -->
+                                <td>occurence_onset_datetime</td>
+                                <td>A string used to identify the reference datetime for onset study. </td>
+                                <td>“07-01-2025 14:02:56”</td>
                             </tr>
                             <tr>
-                                <td>occurrence_onset</td>
-                                <td>A double that lists the onset of an occurrence for an organism.</td>
-                                <td>"-7", "7"</td>
+                                <td>occurrence_end_date</td>
+                                <td>A double that lists the end of an occurrence for experimental subject.</td>
+                                <td>“11-01-2025”</td>
                             </tr>
                             <tr>
-                                <td>occurrence_onset_unit</td>
-                                <td>A string used to identify the unit for InterventionTime.</td>
-                                <td>"Year"</td>
+                                <td>occurence_end_datetime</td>
+                                <td>A datetime for the end of an occurrence. Leave this black if an occurrence is ongoing.</td>
+                                <td>“11-01-2025 06:45:09”</td>
                             </tr>
                             <tr>
-                                <td>occurrence_onset_unit_id</td>
-                                <td>A string used to identify the ontology ID for occurence_onset_unit_id.</td>
-                                <td>"UO_000035"</td>
+                                <td>occurence_ongoing</td>
+                                <td>A binary value that lists if an occurrence has been recorded as being chronic or persistent.</td>
+                                <td>True, False</td>
                             </tr>
                             <tr>
-                                <td>occurrence_end</td>
-                                <td>A double that lists the end of an occurrence for an organism.</td>
-                                <td>"-1", "7"</td>
-                            </tr>
-                            <tr>
-                                <td>occurrence_end_id</td>
-                                <td>A string used to identify the ontology ID for occurence_end_unit_id.</td>
-                                <td>"UO_000035"</td>
-                            </tr>
-                            <tr>
-                                <td>reference_id</td>
+                                <td>reference_source_id</td>
                                 <td>A string that corresponds to the occurrence's ID in another dataset. Must be matched with ForeignSource.</td>
                                 <td>"ADVR00001"</td>
                             </tr>
                             <tr>
-                                <td>reference_source_id</td>
+                                <td>reference_source</td>
                                 <td>A string identifier that corresponds to the data source of the corresponding ForeignID.</td>
                                 <td>"ImmPort"</td>
                             </tr>

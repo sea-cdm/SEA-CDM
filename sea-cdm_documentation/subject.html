@@ -40,8 +40,8 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>organism_id</td>
-                                <td>An internal ID that corresponds to an instance of an organism.</td>
+                                <td>subject_id</td>
+                                <td>An internal ID that corresponds to an instance of a subject.</td>
                                 <td>"ORGO_1"</td>
                             </tr>
                             <tr>
@@ -51,36 +51,48 @@
                             </tr>
                             <tr>
                                 <td>group_id</td>
-                                <td>An foreign key that corresponds to which group an organism belongs to; organisms that do not belong to a group are assigned a group value of 1 (to represent a singleton).</td>
+                                <td>A foreign key that corresponds to which group the experimental subject belongs to; organisms that do not belong to a group are assigned a group value of 1 (to represent a singleton).</td>
                                 <td>"GROUP_1"</td>
                             </tr>
                             <tr>
+                                <td>subject_type</td>
+                                <td>A string representing the general classification of a subject used in an experiment.</td>
+                                <td>“Organism”, “Cell Line”</td>
+                            </tr>
+                            <tr>
+                                <td>subject_type_id</td>
+                                <td>A string corresponding to the ontology ID for the subject_type attribute. </td>
+                                <td>“OBI_0100026” (organism), “CLO_0000031” (cell line)</td>
+                            </tr>
+                            <tr>
                                 <td>species</td>
-                                <td>A string representing the species an organism belongs to; this is a common name that is listed.</td>
+                                <td>A string representing the species a subject belongs to; cell lines should list the original species that they belong to.</td>
                                 <td>"Human"</td>
                             </tr>
                             <tr>
                                 <td>species_id</td>
-                                <td>A string representing the species an organism belongs to; this species is identified as equivalent to “OBI_0100026”.</td>
-                                <td>"NCBITaxon:9606"</td>
+                                <td>A string representing the species an experimental subject belongs to; this species is identified as equivalent to “OBI_0100026”.</td>
+                                <td>"NCBITaxon:9606" (human)</td>
                             </tr>
                             <tr>
                                 <td>organism_race</td>
-                                <td>A string representing the subtype an organism belongs to; this subtype could correspond to a human race or ethnicity, animal breed, or microbial strain. Leave blank for non-humans</td>
-                                <td>“White”, “European”, “HA1 mutants”</td>
+                                <td>A string representing the race or grouping an organism belongs to; this subtype could correspond to a human race or ethnicity. Leave blank for non-humans.</td>
+                                <td>"African American"</td>
                             </tr>
                             <tr>
                                 <td>organism_race_id</td>
                                 <td>A string representing the ontology ID that corresponds to an organism_race.</td>
+                                <td>“NCIT_C16352” (Black or African American)</td>
                             </tr>
                             <tr>
-                                <td>organism_lineage</td>
-                                <td>A string representing the subtype an organism belongs to; this subtype could correspond to animal breed, or microbial strain.</td>
-                                <td>“BALB/C”, “Influenza A Virus Brisbane/A1202”</td>
+                                <td>subject_lineage</td>
+                                <td>A string representing the subtype a subject belongs to.</td>
+                                <td>"HeLa Cell"</td>
                             </tr>
                             <tr>
-                                <td>organism_lineage_id</td>
-                                <td>A string representing the ontology ID that corresponds to an organism_lineage. </td>
+                                <td>subject_lineage_id</td>
+                                <td>A string representing the ontology ID that corresponds to an subject_lineage.</td>
+                                <td>“CLO_0003684” (HeLa)</td>
                             </tr>
                             <!-- <tr>
                                 <td>organism_type_id</td>
@@ -88,18 +100,18 @@
                             </tr> -->
                             <tr>
                                 <td>organism_age</td>
-                                <td>A double that represents the organism age; this is the lowest age listed for the instance of an organism. This must be paired with an OrganismAgeUnit and OrganismAgeID.</td>
+                                <td>A double that represents the organism age; this is the lowest age listed for the instance of an experimental subject. This must be paired with an organism_age_unit and organism_age_unit_id.</td>
                                 <td>46, 57</td>
                             </tr>
                             <tr>
                                 <td>organism_age_unit</td>
-                                <td>A string representing the units for an organism's age.</td>
-                                <td>"Month", "Year"</td>
+                                <td>A string representing the units for an organism_age.</td>
+                                <td>"Day", "Year"</td>
                             </tr>
                             <tr>
                                 <td>organism_age_unit_id</td>
                                 <td>A string representing the ontological ID used for organism_age_unit.</td>
-                                <td>“UO_0000003”, “UO_0000004”,</td>
+                                <td>“UO_0000033” (day), “UO_0000036” (year)</td>
                             </tr>
                             <tr>
                                 <td>organism_sex</td>
@@ -112,7 +124,7 @@
                                 <td>“PATO_00000383”, “PATO_00000384”, “PATO_0000047”</td>
                             </tr>
                             <tr>
-                                <td>reference_id</td>
+                                <td>reference_source_id</td>
                                 <td>A string representing the ID listed by the organism in the reference id.</td>
                             </tr>
                             <tr>
