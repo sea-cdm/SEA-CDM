@@ -46,16 +46,16 @@
                             </tr>
                             <tr>
                                 <td>group_id</td>
-                                <td>An ID used to identify the group an assay result is about. Groups that are about individual organisms or samples are given a special ID.</td>
+                                <td>An ID used to identify the group an assay result is about. Groups that are about an individual organisms or samples are given a special ID.</td>
                                 <td>"GROUP_1"</td>
                             </tr>
                             <tr>
                                 <td>sample_id</td>
-                                <td>A foreign key used to identify the sample result is about. If used for a group, use “1” as placeholder value. </td>
+                                <td>A foreign key used to identify the sample a result is about. If used for a group, use “1” as placeholder value.</td>
                                 <td>"SAMP_1"</td>
                             </tr>
                             <tr>
-                                <td>organism_id</td>
+                                <td>subject_id</td>
                                 <td>A foreign key used to identify the organism results is about. If used for a group, use “1” as placeholder value.</td>
                                 <td>"ORGO_1"</td>
                             </tr>
@@ -72,27 +72,27 @@
                             <tr>
                                 <td>original_assay_type</td>
                                 <td>A string used to identify the original assay type used to generate an assay. This is always an experimental assay.</td>
-                                <td>“Blood.RNA Assay”, “Sequence feature detection assay”</td>
+                                <td>“DNA Sequence feature detection assay”</td>
                             </tr>
                             <tr>
                                 <td>original_assay_type_ID</td>
                                 <td>An ID used to identify the assay ID that an AssayType or OriginalAssayType is part of.</td>
-                                <td>OBI_0000433, OBI_0000070</td>
+                                <td>OBI_0000433 (DNA sequence feature detection assay)</td>
                             </tr>
                             <tr>
                                 <td>datatype</td>
                                 <td>A string used to identify the type of data the results is; either numeric, qualitative, etc.</td>
-                                <td>'Text', 'Figure', 'Image', 'Tensor'</td>
+                                <td>'Image', 'Spreadsheet'</td>
                             </tr>
                             <tr>
                                 <td>datatype_ID</td>
                                 <td>An ontology ID that corresponds to the Datatype.</td>
-                                <td>IAO_0000101, IAO_0000030</td>
+                                <td>“IAO_0000101” (image), “SWO_3000001” (spreadsheet format)</td>
                             </tr>
                             <tr>
-                                <td>data_size</td>
-                                <td>A string used to identify the size of a document. Currently used as a string due to variable size from matrices or hierarchical data.</td>
-                                <td>“9000”, “402x27”, “305x25x200”</td>
+                                <td>dataset_size</td>
+                                <td>A string used to identify the size of the results. Currently used as a string due to variable size from matrices or hierarchical data.</td>
+                                <td>“402x27”</td>
                             </tr>
                             <tr>
                                 <td>file_access</td>
@@ -107,6 +107,7 @@
                             <tr>
                                 <td>replications</td>
                                 <td>An integer that lists how many times an analysis is repeated to generate data; multiple measurements.</td>
+                                <td>1</td>
                             </tr>
                             <tr>
                                 <td>comments</td>

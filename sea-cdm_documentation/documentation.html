@@ -47,17 +47,17 @@
                             <tr>
                                 <td>document_name</td>
                                 <td>A string used to identify the name of a document.</td>
-                                <!-- <td>"VIGET: A web portal for study of vaccine-induced host responses based on Reactome pathways and ImmPort data"</td> -->
+                                <td>"VIGET: A web portal for study of vaccine-induced host responses based on Reactome pathways and ImmPort data"</td>
                             </tr>
                             <tr>
                                 <td>documentation_type</td>
                                 <td>A string used to represent what the documentation is about; i.e. protocol, paper, results, etc.</td>
-                                <td>"Protocol", "Research Paper"</td>
+                                <td>"Research Paper"</td>
                             </tr>
                             <tr>
                                 <td>documentation_type_id</td>
                                 <td>A string used to represent the id of the associated document type.</td>
-                                <td>"IAO_0000030"</td>
+                                <td>“IAO_0000312” (publication about investigation)</td>
                             </tr>
                             <tr>
                                 <td>documentation_file_access</td>
@@ -65,18 +65,19 @@
                                 <td>"10.3389/fimmu.2023.1141030"</td>
                             </tr>
                             <tr>
-                                <td>reference_id</td>
+                                <td>reference_source</td>
+                                <td>A string used to identify the source of documentation that a reference_source_id belongs to.</td>
+                                <td>PubMed</td>
+                            </tr>
+                            <tr>
+                                <td>reference_source_id</td>
                                 <td>A string used to identify a foreign ID used for a document. This is paired to reference_source.</td>
                                 <td>PMID_1351321</td>
                             </tr>
                             <tr>
-                                <td>reference_source</td>
-                                <td>A string used to identify the source of documentation that a reference_id belongs to.</td>
-                                <td>PubMed</td>
-                            </tr>
-                            <tr>
                                 <td>citation</td>
-                                <td>A string representing the citation used for a document. This is used as a shorthand to identify locations.</td>
+                                <td>A string representing the citation used for a document. This is used as a shorthand to identify the date of publication.</td>
+                                <td>Brunson T, Sanati N, Huffman A, Masci AM, Zheng J, Cooke MF, Conley P, He Y, Wu G. VIGET: A web portal for study of vaccine-induced host responses based on Reactome pathways and ImmPort data. Front Immunol. 2023 Mar 21;14:1141030. doi: 10.3389/fimmu.2023.1141030. PMID: 37180100; PMCID: PMC10172660.</td>
                             </tr>
                             <tr>
                                 <td>citation_style</td>
@@ -90,8 +91,8 @@
                             </tr>
                             <tr>
                                 <td>creator_id_type</td>
-                                <td>A string used to find a unique identifier of a person (if available) who has a role in the creation of the documentation.</td>
-                                <td>"ORC-ID", “Organization_ID”</td>
+                                <td>A string used to find a unique identifier of a person (if available) or organization who has a role in the creation of the documentation.</td>
+                                <td>"ORC-ID"</td>
                             </tr>
                             <tr>
                                 <td>creator_role</td>
@@ -101,7 +102,7 @@
                             <tr>
                                 <td>creator_role_id</td>
                                 <td>An OBI ID used to identify the role a person is involved in, such as an author or corresponding author, for this document.</td>
-                                <td>OBI_0000068, OBI_0000102, OBI_0000202</td>
+                                <td>OBI_0000068 (reporting agent role),OBI_0000102 (responsible party role)</td>
                             </tr>
                             <!-- <tr>
                                 <td>person_id</td>
@@ -136,12 +137,12 @@
                                 <td>person_role</td>
                                 <td>An OBI ID used to identify the role a person is involved in, such as an author or corresponding author.</td>
                                 <td>"Author"</td>
-                            </tr> -->
+                            </tr>
                             <tr>
                                 <td>document_source</td>
                                 <td>A string representing a URL or file source for a document.</td>
                                 <td>"10.3389/fimmu.2023.1141030"</td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>

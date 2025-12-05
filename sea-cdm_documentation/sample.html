@@ -38,35 +38,35 @@
                         </tr>
                         <tr>
                             <td>organism_id</td>
-                            <td>A foreign id used to identify a specific organism. For samples that are composed of multiple organisms, a value of ‘0’ is assigned to organism_id and should be queried via group_id.</td>
+                            <td>A foreign id used to identify a specific subject. For samples that are composed of multiple organisms, a value of '0' is assigned to subject_id and should be queried via group_id.</td>
                             <td>"ORGO_1"</td>
                         </tr>
                         <tr>
                             <td>group_id</td>
-                            <td>The group of organism instances that data is collected from. This is done for samples that are generated from multiple organisms</td>
+                            <td>The group of subjects that data is collected from. This is done for samples that are generated from multiple subjects.</td>
                             <td>"GROUP_1, NULL"</td>
                         </tr>
                         <tr>
                             <td>biosample_collection</td>
                             <td>A string representing the collection method of the sample.</td>
-                            <td>“Blood Draw”, “Swabbing”</td>
+                            <td>“Swabbing”</td>
                         </tr>
                         <tr>
                             <td>biosample_collection_id</td>
                             <td>A string representing the ontology id for biosample_collection. method of the sample.</td>
-                            <!-- <td>“Blood Draw”, “Swabbing”</td> -->
+                            <td>“OBI_0002600” (collection of organism from swab)</td>
                         </tr>
                         <tr>
-                            <td>collection_time</td>
-                            <td>A double representing how long from some T0 that an organism was generated.</td>
-                            <td>3., 14</td>
+                            <td>collection_date</td>
+                            <td>A string representing the date the biosample process was done.</td>
+                            <!-- <td>3., 14</td> -->
                         </tr>
                         <tr>
-                            <td>collection_time_unit</td>
-                            <td>A string representing the unit used for the collection time.</td>
-                            <td>"Day", "Month"</td>
+                            <td>collection_datetime</td>
+                            <td>A string representing the datetime the biosample process was done.</td>
+                            <!-- <td>"Day", "Month"</td> -->
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td>collection_time_unit_id</td>
                             <td>A string representing the ID listed by the collection_time_unit in the reference source.</td>
                         </tr>
@@ -78,44 +78,45 @@
                         <tr>
                             <td>t0_definition_id</td>
                             <td>A string representing the ontology ID for t0_definition.</td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <td>biosample_type</td>
-                            <td>A string represent the initial tissue or part of organism a biosample is derived from.</td>
-                            <td>"Lung", "Blood"</td>
+                            <td>A string representing the source a biosample is derived from.</td>
+                            <td>"Blood"</td>
                         </tr>
                         <tr>
                             <td>biosample_type_id</td>
-                            <td>A string representing the ontology id for biosample_type_id. method of the sample.</td>
-                            <td>OBI_0001479</td>
-                        </tr>
-                        <tr>
-                            <td>biopsample_reference_id</td>
-                            <td>A string representing the ID listed by the biosample in the reference source.</td>
+                            <td>A string representing the ontology id for biosample_type_id.</td>
+                            <td>“OBI_0000655” (blood specimen)</td>
                         </tr>
                         <tr>
                             <td>biosample_reference_source</td>
-                            <td>A string representing the documentation source for the biosample ontology ID.</td>
+                            <td>A string representing the documentation source for a biosample.</td>
                             <td>"ImmPort"</td>
                         </tr>
                         <tr>
+                            <td>biosample_reference_source_id</td>
+                            <td>A string representing the ID for the expsample from the biosample_reference_source.</td>
+                        </tr>
+                        <tr>
                             <td>expsample_type</td>
-                            <td>A string representing the type of process a sample was used for (e.g., 'swabbing').</td>
-                            <td>"sc-RNA seq B Cell"</td>
+                            <td>A string representing the final processed specimen used for an assay.</td>
+                            <td>"Blood Plasma"</td>
                         </tr>
                         <tr>
                             <td>expsample_type_id</td>
                             <td>A string representing the ontological ID listed by expsample type.</td>
-                            <td>OBI_0000953</td>
-                        </tr>
-                        <tr>
-                            <td>expsample_reference_id</td>
-                            <td>A string representing the ID listed by the expsample in the reference id.</td>
+                            <td>“OBI_0100016” (blood plasma specimen)</td>
                         </tr>
                         <tr>
                             <td>expsample_reference_source</td>
                             <td>A string representing the documentation source for the expsample ontology ID.</td>
                             <td>"GEO"</td>
+                        </tr>
+                        <tr>
+                            <td>expsample_reference_source_id</td>
+                            <td>A string representing the ID for the expsample from the expsample_reference_source.</td>
+                            <td>GSE_27776</td>
                         </tr>
                         <!-- <tr>
                             <td>replicates</td>
