@@ -162,4 +162,22 @@ tbody td {
     .main-content {
         width: 100%;
     }
+
+    .reference-section {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .reference-section h2 {
+        margin-bottom: 10px;
+    }
+
+    .reference-section a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+
+    .reference-section a:hover {
+        text-decoration: underline;
+    }
 }
