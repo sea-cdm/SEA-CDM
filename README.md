@@ -39,5 +39,10 @@ We have tested SEA-CDM associated MySQL in three use cases:
 ### Tracker link:  
 https://github.com/sea-cdm/SEA-CDM/issues 
 
+### Publications: 
+
+Huffman A, Yeh FY, Hur J, Zheng J, Masci AM, Wu G, Tao C, Athey B, He Y. [SEA CDM: Study-Experiment-Assay Common Data Model and Databases for Cross-Domain Data Integration and Analysis](https://www.nature.com/articles/s41597-026-06558-z). _Sci Data_. 2026 Jan 14; 13(1):238. doi: 10.1038/s41597-026-06558-z. PMID: [41535301](https://pubmed.ncbi.nlm.nih.gov/41535301/). PMCID: [PMC12905146](https://pmc.ncbi.nlm.nih.gov/articles/PMC12905146/).
+
+
 
 
