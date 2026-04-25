@@ -27,6 +27,7 @@ Related links:
 ## Developers 
 - Anthony Huffman
 - Feng-Yu (Leo) Yeh
+- Jie Zheng
 - Yongqun "Oliver" He
 
 ## Links in the SEA-CDM repositories 
