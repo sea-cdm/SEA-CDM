@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Occurrence | SEA-CDM v1.3</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../template.js"></script>
+</head>
+<body>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+    
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+            <!-- Sidebar will be loaded here -->
+            <div id="sidebar-section-archive"></div>
+            
+            <!-- Main content area -->
+            <div class="main-content">
+                <div class="archive-banner">
+                    ⚠️ You are viewing archived documentation for
+                    <strong>SEA-CDM Version 1.3</strong>.
+                    <a href="/sea-cdm_documentation/index.html">
+                        View current documentation (v1.4) →
+                    </a>
+                </div>
+                <h1>Occurrence</h1>
+                <p>An occurrence is defined as a history that affects an organism as part of its lifespan. Occurrences include disease processes, pregnancy, and adverse events (lethal or otherwise).</p>
+                
+                <h2>Occurrence Properties</h2>
+                
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Description</th>
+                                <th>Usage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>occurrence_id</td>
+                                <td>An internal identifier used to identify a specific occurrence.</td>
+                                <td>"OCCUR_1"</td>
+                            </tr>
+                            <tr>
+                                <td>subject_id</td>
+                                <td>An identifier that maps to an experimental subject.</td>
+                                <td>"ORGO_1"</td>
+                            </tr>
+                            <tr>
+                                <td>occurrence_name</td>
+                                <td>A string that lists the reported summary of an occurrence.</td>
+                                <td>"Fever", "Influenza"</td>
+                            </tr>
+                            <tr>
+                                <td>occurrence_name_id</td>
+                                <td>A string that lists the ontology ID used to identify an occurrence.</td>
+                                <td>“HP_0001945”, “DOID_8469”</td>
+                            </tr>
+                            <tr>
+                                <td>occurrence_severity</td>
+                                <td>An integer that corresponds to the severity of an occurrence similar to the scale used by the Common Terminology for Adverse Events (CTCAE). Benign occurrences are rated as 0.</td>
+                                <td>“0”, “1”, “2”, “3”, “4”, “5”</td>
+                            </tr>
+                            <tr>
+                                <td>occurence_onset_date</td>
+                                <td>A string used to identify the reference date for onset study.</td>
+                                <td>“07-01-2025”</td>
+                            </tr>
+                            <tr>
+                                <td>occurence_onset_datetime</td>
+                                <td>A string used to identify the reference datetime for onset study. </td>
+                                <td>“07-01-2025 14:02:56”</td>
+                            </tr>
+                            <tr>
+                                <td>occurrence_end_date</td>
+                                <td>A double that lists the end of an occurrence for experimental subject.</td>
+                                <td>“11-01-2025”</td>
+                            </tr>
+                            <tr>
+                                <td>occurence_end_datetime</td>
+                                <td>A datetime for the end of an occurrence. Leave this black if an occurrence is ongoing.</td>
+                                <td>“11-01-2025 06:45:09”</td>
+                            </tr>
+                            <tr>
+                                <td>occurence_ongoing</td>
+                                <td>A binary value that lists if an occurrence has been recorded as being chronic or persistent.</td>
+                                <td>True, False</td>
+                            </tr>
+                            <tr>
+                                <td>reference_source_id</td>
+                                <td>A string that corresponds to the occurrence's ID in another dataset. Must be matched with ForeignSource.</td>
+                                <td>"ADVR00001"</td>
+                            </tr>
+                            <tr>
+                                <td>reference_source</td>
+                                <td>A string identifier that corresponds to the data source of the corresponding ForeignID.</td>
+                                <td>"ImmPort"</td>
+                            </tr>
+                            <tr>
+                                <td>comments</td>
+                                <td>Placeholder for additional comments.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+</html>

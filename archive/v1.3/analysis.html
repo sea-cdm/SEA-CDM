@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis | SEA-CDM v1.3</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../template.js"></script>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+
+            <div id="sidebar-section-archive"></div>
+
+            <div class="main-content">
+
+                <div class="archive-banner">
+                    ⚠️ You are viewing archived documentation for
+                    <strong>SEA-CDM Version 1.3</strong>.
+                    <a href="/sea-cdm_documentation/index.html">
+                        View current documentation (v1.4) →
+                    </a>
+                </div>
+
+                <h1>Analysis</h1>
+
+                <p>
+                    An analysis defined as a planned process which transforms a data result 
+                    into another data result. A data result for SEA CDM is derived from an 
+                    assay. This includes the use of computational algorithms and statistical 
+                    analysis.
+                </p>
+
+                <h2>Analysis Properties</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Usage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>analysis_id</td>
+                            <td>A primary key used to identify a specific analysis.</td>
+                            <td>"ANLYS_1"</td>
+                        </tr>
+                        <tr>
+                            <td>group_id</td>
+                            <td>A foreign key used to identify a specific group used for an analysis.</td>
+                            <td>"GROUP_1"</td>
+                        </tr>
+                        <tr>
+                            <td>documentation_id</td>
+                            <td>A foreign key used to provide the <code>documentation_id</code> in 
+                            the Documentation table that provides the analysis protocol and other 
+                            related information used to describe an analysis.</td>
+                            <td>"DOCU_1"</td>
+                        </tr>
+                        <tr>
+                            <td>input_data</td>
+                            <td>A string listed the data types that are used as inputs for a 
+                            statistical analysis.</td>
+                            <td>"VIGET"</td>
+                        </tr>
+                        <tr>
+                            <td>input_data_id</td>
+                            <td>A string listing the unique identifier for the input_data.</td>
+                            <td>"https://viget.violinet.org/"</td>
+                        </tr>
+                        <tr>
+                            <td>file_access</td>
+                            <td>A string listing the download link / URL needed to access the 
+                            file for the input data.</td>
+                            <td>"https://zenodo.org/records/7407195"</td>
+                        </tr>
+                        <tr>
+                            <td>analysis_name</td>
+                            <td>A string representing the name of a type of analysis.</td>
+                            <td>"LIMMA"</td>
+                        </tr>
+                        <tr>
+                            <td>analysis_name_id</td>
+                            <td>A string used to provide an ontology identification of an 
+                            analysis name id.</td>
+                            <td>"OBCS_0000168"</td>
+                        </tr>
+                        <tr>
+                            <td>reference_source_id</td>
+                            <td>A string used to identify an external reference for the group.</td>
+                            <td>"37180100"</td>
+                        </tr>
+                        <tr>
+                            <td>reference_source</td>
+                            <td>A string used to identify the source of the 
+                            <code>reference_source_id</code>.</td>
+                            <td>"PMID"</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+</body>
+</html>

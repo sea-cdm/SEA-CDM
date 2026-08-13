@@ -108,35 +108,32 @@ function loadComponent(elementId, componentPath, callback) {
 // Document ready function
 document.addEventListener('DOMContentLoaded', function() {
     const basePath = getBasePath();
-    // console.log(`DOM Content Loaded. Base path detected: ${basePath}`); // Optional logging
-    // console.log(`Path to root: ${getPathToRoot()}`); // Optional logging
 
-    // Load components
     if (document.getElementById('navbar-container')) {
-        // Assume path is relative to root
         loadComponent('navbar-container', 'components/navbar.html');
     }
 
     if (document.getElementById('footer-container')) {
-        // Assume path is relative to root
         loadComponent('footer-container', 'components/footer.html');
     }
 
+    // v1.4 documentation sidebar
     if (document.getElementById('sidebar-section')) {
-         // Assume path is relative to root
-        loadComponent('sidebar-section', 'components/sidebar-section.html', highlightCurrentPage);
-    } else if (document.querySelector('.sidebar')) { // Handle direct sidebar if no container
-        // If sidebar is static HTML, links might need fixing if not handled by components
-        // However, the revised fixLinks only runs *after* component loading.
-        // If you have static sidebars/navbars not loaded via JS, their links
-        // won't be fixed by this script. Consider loading them via loadComponent too.
-         console.log("Static sidebar detected, ensuring highlighting runs."); // Optional logging
-        highlightCurrentPage();
+        loadComponent(
+            'sidebar-section',
+            'components/sidebar-section.html',
+            highlightCurrentPage
+        );
     }
 
-    // Initial link fix for static content might be needed if links are absolute /...
-    // but this is often better handled by writing links correctly initially.
-    // fixLinks(); // You could run it once here, but beware of unintended consequences.
+    // v1.3 archive sidebar
+    if (document.getElementById('sidebar-section-archive')) {
+        loadComponent(
+            'sidebar-section-archive',
+            'components/sidebar-section-archive1.3.html',
+            highlightCurrentPage
+        );
+    }
 });
 
 // Function to highlight the current page in the sidebar

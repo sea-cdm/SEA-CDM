@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ontology | SEA-CDM v1.3</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../template.js"></script>
+</head>
+<body>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+    
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+            <!-- Sidebar will be loaded here -->
+            <div id="sidebar-section-archive"></div>
+            
+            <!-- Main content area -->
+            <div class="main-content">
+                <div class="archive-banner">
+                    ⚠️ You are viewing archived documentation for
+                    <strong>SEA-CDM Version 1.3</strong>.
+                    <a href="/sea-cdm_documentation/index.html">
+                        View current documentation (v1.4) →
+                    </a>
+                </div>
+                <h1>Ontology</h1>
+            
+                <p>This table contains a list of all ontologies used for a SEA CDM. Ontologies are special form of documentation that is meant to be directly queried by SEA CDM to link IDs to knowledge graphs. Further information is meant to be queried or linked according to work done in SEA CDM.</p>
+                
+                <h2>Ontology Properties</h2>
+                
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Description</th>
+                                <th>Usage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ontology_id</td>
+                                <td>A primary key used internally to identify a specific ontology.</td>
+                                <td>"ONTO_1"</td>
+                            </tr>
+                            <tr>
+                                <td>documentation_id</td>
+                                <td>An foreign key used to identify the documentation associated with the ontology.</td>
+                                <td>"DOCU_1"</td>
+                            </tr>
+                            <tr>
+                                <td>ontology_name</td>
+                                <td>A string used to provide the common name that is used as an ontology.</td>
+                                <td>“Ontology of Biomedical Investigations”,“Ontology of Precision Medical Investigation”, “Vaccine Ontology”</td>
+                            </tr>
+                            <tr>
+                                <td>ontology_iri</td>
+                                <td>A string used to identify the ontology IRI that is used for terms within a specific ontology.</td>
+                                <td>“http://purl.obolibrary.org/obo/OBI”, “http://purl.obolibrary.org/obo/OPMI, “http://purl.obolibrary.org/obo/VO”</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+</html>

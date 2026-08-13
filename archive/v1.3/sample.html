@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample | SEA-CDM v1.3</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../template.js"></script>
+</head>
+<body>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+    
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+            <!-- Sidebar will be loaded here -->
+            <div id="sidebar-section-archive"></div>
+            
+            <!-- Main content area -->
+            <div class="main-content">
+                <div class="archive-banner">
+                    ⚠️ You are viewing archived documentation for
+                    <strong>SEA-CDM Version 1.3</strong>.
+                    <a href="/sea-cdm_documentation/index.html">
+                        View current documentation (v1.4) →
+                    </a>
+                </div>
+                <h1>Sample</h1>
+                <p>A sample is the result of an experiment that is collected from an organism and used to generate data. A biosample refers to the tissue or cell culture collected from an organism, while an experimental sample (exp sample) is the sample that has been further processed.</p>
+                
+                <h2>Sample Properties</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Usage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>sample_id</td>
+                            <td>An primary id used to identify a specific sample.</td>
+                            <td>"SAMP_1"</td>
+                        </tr>
+                        <tr>
+                            <td>organism_id</td>
+                            <td>A foreign id used to identify a specific subject. For samples that are composed of multiple organisms, a value of '0' is assigned to subject_id and should be queried via group_id.</td>
+                            <td>"ORGO_1"</td>
+                        </tr>
+                        <tr>
+                            <td>group_id</td>
+                            <td>The group of subjects that data is collected from. This is done for samples that are generated from multiple subjects.</td>
+                            <td>"GROUP_1, NULL"</td>
+                        </tr>
+                        <tr>
+                            <td>biosample_collection</td>
+                            <td>A string representing the collection method of the sample.</td>
+                            <td>“Swabbing”</td>
+                        </tr>
+                        <tr>
+                            <td>biosample_collection_id</td>
+                            <td>A string representing the ontology id for biosample_collection. method of the sample.</td>
+                            <td>“OBI_0002600” (collection of organism from swab)</td>
+                        </tr>
+                        <tr>
+                            <td>collection_date</td>
+                            <td>A string representing the date the biosample process was done.</td>
+                            <!-- <td>3., 14</td> -->
+                        </tr>
+                        <tr>
+                            <td>collection_datetime</td>
+                            <td>A string representing the datetime the biosample process was done.</td>
+                            <!-- <td>"Day", "Month"</td> -->
+                        </tr>
+                        <!-- <tr>
+                            <td>collection_time_unit_id</td>
+                            <td>A string representing the ID listed by the collection_time_unit in the reference source.</td>
+                        </tr>
+                        <tr>
+                            <td>t0_definition</td>
+                            <td>A string representing the reference event that collection time is measured to.</td>
+                            <td>"TIme of Administration", "Time of Enrollment"</td>
+                        </tr>
+                        <tr>
+                            <td>t0_definition_id</td>
+                            <td>A string representing the ontology ID for t0_definition.</td>
+                        </tr> -->
+                        <tr>
+                            <td>biosample_type</td>
+                            <td>A string representing the source a biosample is derived from.</td>
+                            <td>"Blood"</td>
+                        </tr>
+                        <tr>
+                            <td>biosample_type_id</td>
+                            <td>A string representing the ontology id for biosample_type_id.</td>
+                            <td>“OBI_0000655” (blood specimen)</td>
+                        </tr>
+                        <tr>
+                            <td>biosample_reference_source</td>
+                            <td>A string representing the documentation source for a biosample.</td>
+                            <td>"ImmPort"</td>
+                        </tr>
+                        <tr>
+                            <td>biosample_reference_source_id</td>
+                            <td>A string representing the ID for the expsample from the biosample_reference_source.</td>
+                        </tr>
+                        <tr>
+                            <td>expsample_type</td>
+                            <td>A string representing the final processed specimen used for an assay.</td>
+                            <td>"Blood Plasma"</td>
+                        </tr>
+                        <tr>
+                            <td>expsample_type_id</td>
+                            <td>A string representing the ontological ID listed by expsample type.</td>
+                            <td>“OBI_0100016” (blood plasma specimen)</td>
+                        </tr>
+                        <tr>
+                            <td>expsample_reference_source</td>
+                            <td>A string representing the documentation source for the expsample ontology ID.</td>
+                            <td>"GEO"</td>
+                        </tr>
+                        <tr>
+                            <td>expsample_reference_source_id</td>
+                            <td>A string representing the ID for the expsample from the expsample_reference_source.</td>
+                            <td>GSE_27776</td>
+                        </tr>
+                        <!-- <tr>
+                            <td>replicates</td>
+                            <td>An integer representing the number of replicates generated for this sample.</td>
+                            <td>1</td>
+                        </tr> -->
+                        <tr>
+                            <td>comments</td>
+                            <td>A string used as a placeholder for additional comments or notes.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+</html>
