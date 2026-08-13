@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assay Documentation</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../template.js"></script>
+</head>
+<body>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+            <!-- Sidebar will be loaded here -->
+            <div id="sidebar-section"></div>
+
+            <!-- Main content area -->
+            <div class="main-content">
+                <h1>Site</h1>
+
+                <p>
+                    A site is an immaterial entity that is used to identify the location a planned process occurs in. The Site class has four core attributes: name, type, trait, location.
+                </p>
+
+                <ul class="attribute-list">
+                    <li><strong>Trait</strong> &ndash; denotes any environmental variables (e.g., temperature) that are reported.</li>
+                    <li><strong>Location</strong> &ndash; is split across location, location_type, and location_country. The location type is meant to specify if a location is a set co-ordinate, address, room, or smaller locations. The latter is reported due to experimental cohorts being sorted by different countries.</li>
+                </ul>
+
+                <h2>Site Properties</h2>
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Description</th>
+                                <th>Example Usage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>site_id</code></td>
+                                <td>An internal id that is used to identify the site in SEA-CDM.</td>
+                                <td>"SITE_001"</td>
+                            </tr>
+                            <tr>
+                                <td><code>site_name</code></td>
+                                <td>A string representing the name of the location that the site covers.</td>
+                                <td>"University of Michigan Medicine"</td>
+                            </tr>
+                            <tr>
+                                <td><code>site_type</code></td>
+                                <td>A string used an id to represent the relevant occurrences performed at a site.</td>
+                                <td>"Laboratory, hospital"</td>
+                            </tr>
+                            <tr>
+                                <td><code>site_type_id</code></td>
+                                <td>An uriorcurie linked with the <code>site_type</code> attribute.</td>
+                                <td>OBI:0003250</td>
+                            </tr>
+                            <tr>
+                                <td><code>site_trait</code></td>
+                                <td>A string representing a trait associated with the site; these are typically environmental factors.</td>
+                                <td>"Temperature"</td>
+                            </tr>
+                            <tr>
+                                <td><code>site_trait_id</code></td>
+                                <td>An uriorcurie representing the site trait.</td>
+                                <td>PATO:0000146</td>
+                            </tr>
+                            <tr>
+                                <td><code>site_trait_value</code></td>
+                                <td>A list of strings representing the value recorded for site traits.</td>
+                                <td>"27"</td>
+                            </tr>
+                            <tr>
+                                <td><code>site_trait_value_unit</code></td>
+                                <td>A list of strings representing the unit associated with the site trait.</td>
+                                <td>"Celsius"</td>
+                            </tr>
+                            <tr>
+                                <td><code>site_trait_value_unit_id</code></td>
+                                <td>A list of uriorcurie representing the site trait value.</td>
+                                <td>NCIT:C41141</td>
+                            </tr>
+                            <tr>
+                                <td><code>site_location</code></td>
+                                <td>A string used to represent the site location; format is determined by <code>site_location_type</code>.</td>
+                                <td>"2800 Plymouth Road; Ann Arbor; MI; 48109"</td>
+                            </tr>
+                            <tr>
+                                <td><code>site_location_type</code></td>
+                                <td>A string used an id to represent the site in a different database; is it an address, co-ordinates, etc.</td>
+                                <td>"Address"</td>
+                            </tr>
+                            <tr>
+                                <td><code>site_location_id</code></td>
+                                <td>The uriorcurie linked with the <code>site_location_Identifier</code> attribute.</td>
+                                <td>NCIT:C25690</td>
+                            </tr>
+                            <tr>
+                                <td><code>site_country_id</code></td>
+                                <td>A string representing the alpha-3 code (ISO-3166).</td>
+                                <td>"USA", "CHN"</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+</html>

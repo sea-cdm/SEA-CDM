@@ -21,72 +21,84 @@
                 <h1>Analysis</h1>
 
                 <p>
-                    An analysis defined as a planned process which transforms a data result into another data result. A data result for SEA CDM is derived from an assay. This includes the use of computational algorithms and statistical analysis. 
+                    An Analysis is defined as a planned process which transforms result data into a different result data. Typically, data transformation is done to analyze data from an assay that is collected from a group of samples or subjects. Alternatively, an analysis would also cover data transformations performed via computational algorithms and other forms of statistical analysis. The Analysis class contains three attributes used to characterize it: input data, file access, analysis name.
+                </p>
+
+                <ul class="attribute-list">
+                    <li><strong>Input data</strong> &ndash; is used to describe the data file used to input it, and should be a subclass of 'information content entity' (IAO_0000030).</li>
+                    <li><strong>File access</strong> &ndash; is used to identify a download link to the transformed data.</li>
+                    <li><strong>Analysis name</strong> &ndash; is used to identify the method used for the data transformation (OBI_0200000).</li>
+                </ul>
+
+                <p>
+                    This table contains a list of all analyses listed in a study as part of SEA-CDM. Each analysis is listed as an instance within a dataset; the same analysis from different studies will not be linked unless there is a connection between reference id values.
                 </p>
 
                 <h2>Analysis Properties</h2>
 
-                <table>
+                <div class="table-responsive">
+                <table class="table table-striped table-bordered">
                     <thead>
                         <tr>
                             <th>Property</th>
                             <th>Description</th>
-                            <th>Usage</th>
+                            <th>Example Usage</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>analysis_id</td>
+                            <td><code>analysis_id</code></td>
                             <td>A primary key used to identify a specific analysis.</td>
                             <td>"ANLYS_1"</td>
                         </tr>
                         <tr>
-                            <td>group_id</td>
-                            <td>A foreign key used to identify a specific group used for an analysis.</td>
+                            <td><code>group_id</code></td>
+                            <td>A foreign key used to identify a specific <a href="groups.html">group</a> used for an analysis.</td>
                             <td>"GROUP_1"</td>
                         </tr>
                         <tr>
-                            <td>documentation_id</td>
-                            <td>A foreign key used to provide the <code>documentation_id</code> in the Documentation table that provides the analysis protocol and other related information used to describe an analysis.</td>
+                            <td><code>documentation_id</code></td>
+                            <td>A foreign key used to provide the <code>documentation_id</code> in the <a href="documentation.html">Documentation</a> table that provides the analysis protocol and other related information used to describe an analysis.</td>
                             <td>"DOCU_1"</td>
                         </tr>
                         <tr>
-                            <td>input_data</td>
-                            <td>A string listed the data types that are used as inputs for a statistical analysis</td>
+                            <td><code>input_data</code></td>
+                            <td>A string listed the data types that are used as inputs for a statistical analysis.</td>
                             <td>"VIGET"</td>
                         </tr>
                         <tr>
-                            <td>input_data_id</td>
-                            <td>A string listing the unique identifier for the input_data.</td>
-                            <td>“https://viget.violinet.org/”</td>
+                            <td><code>input_data_id</code></td>
+                            <td>A string listing the ontology ID for each <code>input_data</code> class.</td>
+                            <td>NGBO:6000408</td>
                         </tr>
                         <tr>
-                            <td>file_access</td>
+                            <td><code>file_access</code></td>
                             <td>A string listing the download link / URL needed to access the file for the input data.</td>
-                            <td>“https://zenodo.org/records/7407195”</td>
+                            <td><a href="https://zenodo.org/records/7407195">https://zenodo.org/records/7407195</a></td>
                         </tr>
                         <tr>
-                            <td>analysis_name</td>
+                            <td><code>analysis_name</code></td>
                             <td>A string representing the name of a type of analysis.</td>
                             <td>"LIMMA"</td>
                         </tr>
                         <tr>
-                            <td>analysis_name_id</td>
+                            <td><code>analysis_name_id</code></td>
                             <td>A string used to provide an ontology identification of an analysis name id.</td>
-                            <td>“OBCS_0000168”</td>
+                            <td>EFO:0001456</td>
                         </tr>
                         <tr>
-                            <td>reference_source_id</td>
+                            <td><code>reference_id</code></td>
                             <td>A string used to identify an external reference for the group.</td>
-                            <td>“37180100”</td>
+                            <td>7407195</td>
                         </tr>
                         <tr>
-                            <td>reference_source</td>
-                            <td>A string used to identify the source of the <code>reference_source_id</code>.</td>
-                            <td>"PMID"</td>
+                            <td><code>reference_source</code></td>
+                            <td>A string used to identify the source of the <code>reference_id</code>.</td>
+                            <td>Zenodo</td>
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
     </div>

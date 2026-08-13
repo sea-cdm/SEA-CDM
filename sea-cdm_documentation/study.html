@@ -20,7 +20,7 @@
             <div class="main-content">
                 <h1>Study</h1>         
                 <p>
-                    A study is a planned process that is intended to answer a scientific question through multiple types of experiments or observational studies.
+                    A study is a planned process that is intended to answer a scientific question through multiple types of experiments or observational studies. A study is the highest level of the SEA model and should link all relevant documentation and experiments together.
                 </p>
                 
                 <h2>Study Properties</h2>
@@ -30,78 +30,69 @@
                             <tr>
                                 <th>Property</th>
                                 <th>Description</th>
-                                <th>Usage</th>
+                                <th>Example Usage</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>study_id</td>
+                                <td><code>study_id</code></td>
                                 <td>A primary key used to represent a study.</td>
                                 <td>"STUDY_1"</td>
                             </tr>
                             <tr>
-                                <td>study_name</td>
+                                <td><code>study_name</code></td>
                                 <td>A string representing the name of a study.</td>
                                 <td>"OSEAN-DB Vaccine Gene Response Study"</td>
                             </tr>
                             <tr>
-                                <td>study_description</td>
+                                <td><code>study_description</code></td>
                                 <td>A string representing a short description of a study. This is set to 500 characters or less and is intended to illustrate the key question of a study.</td>
-                                <td>"A study to analyze difference in vaccine gene response data from influenza using data in OSEAN"</td>
+                                <td>"A study to analyze differences in vaccine gene response data from influenza using data in OSEAN"</td>
                             </tr>
                             <tr>
-                                <td>study_type</td>
+                                <td><code>study_type</code></td>
                                 <td>A string representing the type of a study.</td>
-                                <td>"Clinical Investigation", "Experimental Study"</td>
+                                <td>'Clinical Investigation'; 'Experimental Study'; 'Meta-Analysis'.</td>
                             </tr>
                             <tr>
-                                <td>study_type_id</td>
-                                <td>An ontology string representing the type of a study.</td>
-                                <td>OBI_0003697 (clinical investigation), OBI_0500000 (study design)</td>
+                                <td><code>study_type_id</code></td>
+                                <td>An uriorcurie representing the type of a study.</td>
+                                <td>OBI:0500000</td>
                             </tr>
                             <tr>
-                                <td>study_focus</td>
-                                <td>A string representing the intended process a study is about</td>
-                                <td>"Immune Response", "Vaccine Response"</td>
+                                <td><code>study_focus</code></td>
+                                <td>A string representing the intended process a study is about.</td>
+                                <td>'Immune Response'; 'Infection Response'; 'Vaccine Response';</td>
                             </tr>
                             <tr>
-                                <td>study_focus_id</td>
-                                <td>An ontology string representing the study focus.</td>
-                                <td>Immune response (GO_0006955), Vaccine response (VO_0005433)</td>
+                                <td><code>study_focus_id</code></td>
+                                <td>An uriorcurie representing the study focus.</td>
+                                <td>BFO:0000015</td>
                             </tr>
                             <tr>
-                                <td>study_keywords</td>
-                                <td>A string representing the keywords (usually diseases or qualities) to be used in the study.</td>
-                                <td>Influenza, Tuberculosis</td>
-                            </tr>
-                            <tr>
-                                <td>study_keyword_id</td>
-                                <td>An ontology string representing the study keyword.</td>
-                                <td>NCBITaxon_11320 (influenza), MONDO_0018076 (tuberculosis)</td>
-                            </tr>
-                            <!-- <tr>
-                                <td>study_subject</td>
+                                <td><code>study_subject</code></td>
                                 <td>A string representing the intended subject matter shown by a study; this can be a process or material entity.</td>
-                                <td>"Humans"</td>
+                                <td>'Influenza', 'tuberculosis'</td>
                             </tr>
                             <tr>
-                                <td>study_subject_id</td>
-                                <td>A ontology string representing the intended subject matter shown by a study.</td>
-                                <td>Human (NCBITaxon_9606)</td>
-                            </tr> -->
-                            <tr>
-                                <td>reference_source_id</td>
-                                <td>A foreign ID used to represent the source of a study from another source. Must be paired with reference_source.</td>
-                                <td>"SDY562"</td>
+                                <td><code>study_subject_id</code></td>
+                                <td>An uriorcurie representing the intended subject matter shown by a study.</td>
+                                <td>BFO:0000002</td>
                             </tr>
                             <tr>
-                                <td>reference_source</td>
+                                <td><code>reference_id</code></td>
+                                <td>A foreign ID used to represent the source of a study from another source. Must be paired with <code>reference_source</code>.</td>
+                                <td>'SDY562'</td>
+                            </tr>
+                            <tr>
+                                <td><code>reference_source</code></td>
                                 <td>A string representing the reference source for a study.</td>
-                                <td>ImmPort</td>
+                                <td>'ImmPort'</td>
                             </tr>
                             <tr>
-                                <td>Comments</td>
+                                <td><code>comments</code></td>
                                 <td>A string used as a placeholder for extra words or comments.</td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
