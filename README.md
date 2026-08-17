@@ -8,15 +8,15 @@ SEA-CDM was initiated by He Lab in the University of Michigan Medical School, An
 SEA CDM web home: 
 https://sea-cdm.github.io/SEA-CDM/index.html
 
-SEA CDM Documentation home: https://sea-cdm.github.io/SEA-CDM/sea-cdm_documentation/index.html 
+SEA CDM Documentation home: https://sea-cdm.github.io/SEA-CDM/sea-cdm_versions/index.html 
 
 
 ## SEA-CDM Documentation  
 
-The SEA CDM relational database tables and columns are defined on:  [https://sea-cdm.github.io/SEA-CDM/sea-cdm_documentation/](https://sea-cdm.github.io/SEA-CDM/sea-cdm_documentation/). This site provides detailed documentation on SEA CDM system classes and attributes, or tables and columns in the relational database format. 
+The SEA CDM relational database tables and columns are defined on:  [https://sea-cdm.github.io/SEA-CDM/sea-cdm_versions/](https://sea-cdm.github.io/SEA-CDM/sea-cdm_versions/). This site provides detailed documentation on SEA CDM system classes and attributes, or tables and columns in the relational database format. 
 
 Related links: 
-- Home page of SEA CDM Documentation: https://sea-cdm.github.io/SEA-CDM/sea-cdm_documentation/index.html 
+- Home page of SEA CDM Documentation: https://sea-cdm.github.io/SEA-CDM/sea-cdm_versions/index.html 
 - https://sea-cdm.github.io/SEA-CDM/index.html
 - Github Organization: https://github.com/sea-cdm
     - Repositories:

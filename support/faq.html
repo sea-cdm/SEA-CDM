@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | SEA-CDM</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../template.js"></script>
+    <style>
+        .faq-section {
+            margin-top: 40px;
+        }
+        .faq-section h2 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 8px;
+        }
+        .faq-item {
+            background-color: #f8f9fa;
+            border-left: 3px solid #4CAF50;
+            border-radius: 0 4px 4px 0;
+            margin-bottom: 12px;
+            padding: 4px 15px;
+        }
+        .faq-item summary {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 10px 0;
+            list-style: none;
+        }
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-item summary::before {
+            content: "+ ";
+            color: #2e7d32;
+            font-weight: bold;
+        }
+        .faq-item[open] summary::before {
+            content: "\2212 ";
+        }
+        .faq-item p {
+            margin: 0 0 12px 0;
+            max-width: 900px;
+        }
+        .faq-item ul {
+            margin: 0 0 12px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="content">
+            Answers to common questions about the Study-Experiment-Assay Common Data Model (SEA-CDM), its documentation, and how to get involved. If your question isn't answered here, see the <a href="https://github.com/sea-cdm/SEA-CDM/issues" target="_blank">GitHub issue tracker</a> or reach out to the He Lab directly.
+        </div>
+
+        <div class="faq-section">
+            <h2>General</h2>
+
+            <details class="faq-item">
+                <summary>What is SEA-CDM?</summary>
+                <p>
+                    SEA-CDM (Study-Experiment-Assay Common Data Model) is a flexible common data model designed to
+                    represent complex biological studies across multiple domains. It standardizes how study metadata,
+                    experiment data, and assay outputs are represented so that data from different sources can be
+                    integrated and compared. See the <a href="/index.html">home page</a> for an overview and diagram
+                    of the model.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Who developed SEA-CDM?</summary>
+                <p>
+                    SEA-CDM was initiated by the He Lab at the University of Michigan Medical School. The core
+                    developers are Anthony Huffman, Feng-Yu (Leo) Yeh, Jie Zheng, and Yongqun "Oliver" He. Full
+                    background on how the model evolved is available on the <a href="/Background/background.html">History</a>
+                    page.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What is the DEV framework?</summary>
+                <p>
+                    The Data-Entity-Variable (DEV) framework is the conceptual foundation behind SEA-CDM. It
+                    distinguishes between variables (statistical entities), data items (measured values), and
+                    real-world entities, clarifying how experimental factors relate to the data collected about
+                    them. See the <a href="/Background/background.html#">History</a> page for a full explanation and
+                    diagrams.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Is there a publication describing SEA-CDM?</summary>
+                <p>
+                    Yes. Huffman A, Yeh FY, Hur J, Zheng J, Masci AM, Wu G, Tao C, Athey B, He Y.
+                    <strong>SEA CDM: Study-Experiment-Assay Common Data Model and Databases for Cross-Domain Data
+                    Integration and Analysis.</strong> <em>Sci. Data.</em> 2026 Jan 14;13(1):238.
+                    doi: 10.1038/s41597-026-06558-z. PMID:
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/41535301/" target="_blank">41535301</a>. PMCID:
+                    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12905146/" target="_blank">PMC12905146</a>.
+                </p>
+            </details>
+        </div>
+
+        <div class="faq-section">
+            <h2>Documentation &amp; Versions</h2>
+
+            <details class="faq-item">
+                <summary>Where can I find the full documentation of SEA-CDM classes and attributes?</summary>
+                <p>
+                    Detailed documentation of every SEA-CDM class (Study, Experiment, Assay, Sample, Subject, and
+                    more), including table and column definitions, is available under
+                    <a href="/sea-cdm_versions/index.html">SEA-CDM Versions</a>. The current release is
+                    <a href="/sea-cdm_versions/v1.4/index.html">Version 1.4</a>.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What versions of SEA-CDM are available, and which one should I use?</summary>
+                <p>
+                    <a href="/sea-cdm_versions/v1.4/index.html">Version 1.4</a> is the current, actively maintained
+                    release and should be used for new work. Earlier releases, such as
+                    <a href="/sea-cdm_versions/v1.3/index.html">Version 1.3</a>, are kept on the
+                    <a href="/sea-cdm_versions/index.html">archived versions</a> page for reference only.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What changed between Version 1.3 and Version 1.4?</summary>
+                <p>
+                    Version 1.4 introduced the <strong>Provider</strong> and <strong>Site</strong> classes, which were
+                    not part of Version 1.3. Beyond these additions, the two versions cover the same core Study,
+                    Experiment, and Assay structure. Consult the class pages within each version for the full
+                    attribute-level details.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What core classes make up the SEA-CDM data model?</summary>
+                <p>
+                    The current model (v1.4) includes: Study, Experiment, Assay, Analysis, Intervention, Occurrence,
+                    Groups, Sample, Subject, Material, Documentation, Ontology, Provider, and Site. Each class has its
+                    own documentation page describing its purpose, attributes, and relationships to other classes.
+                </p>
+            </details>
+        </div>
+
+        <div class="faq-section">
+            <h2>Data &amp; Implementation</h2>
+
+            <details class="faq-item">
+                <summary>Is there a database implementation of SEA-CDM?</summary>
+                <p>
+                    Yes. SEA-CDM has been implemented and tested as a MySQL relational database (OSEAN-DB), with a
+                    companion knowledge graph representation (OSEAN-KG). Both are available in the
+                    <a href="https://github.com/sea-cdm" target="_blank">SEA-CDM GitHub organization</a>.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Are there example datasets or use cases built on SEA-CDM?</summary>
+                <p>
+                    SEA-CDM has been applied to real-world datasets, including the VIGET, ImmPort, and CellxGene use
+                    cases described in the project's <a href="https://github.com/sea-cdm/SEA-CDM" target="_blank">GitHub
+                    repository</a> and associated publication.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What ontologies does SEA-CDM use?</summary>
+                <p>
+                    SEA-CDM reuses terms from established biomedical ontologies (such as OBI and IAO) wherever
+                    possible to identify roles, document types, and other controlled attributes. See the Ontology
+                    class documentation for details on how ontology terms are attached to variables.
+                </p>
+            </details>
+        </div>
+
+        <div class="faq-section">
+            <h2>Contributing &amp; Support</h2>
+
+            <details class="faq-item">
+                <summary>Is SEA-CDM open source?</summary>
+                <p>
+                    Yes. All SEA-CDM code and documentation source is publicly available on
+                    <a href="https://github.com/sea-cdm/SEA-CDM" target="_blank">GitHub</a> under the SEA-CDM
+                    organization, alongside the related OSEAN-DB and OSEAN-KG repositories.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>How do I report a bug or request a new feature?</summary>
+                <p>
+                    Please open an issue on the
+                    <a href="https://github.com/sea-cdm/SEA-CDM/issues" target="_blank">SEA-CDM GitHub issue
+                    tracker</a>. Include as much detail as possible, such as the class/attribute involved and steps
+                    to reproduce the issue.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>How should I cite SEA-CDM in my own work?</summary>
+                <p>
+                    Please cite the primary publication: Huffman A, Yeh FY, Hur J, Zheng J, Masci AM, Wu G, Tao C,
+                    Athey B, He Y. SEA CDM: Study-Experiment-Assay Common Data Model and Databases for Cross-Domain
+                    Data Integration and Analysis. <em>Sci. Data.</em> 2026 Jan 14;13(1):238.
+                    doi: 10.1038/s41597-026-06558-z.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Who can I contact with other questions?</summary>
+                <p>
+                    For questions not covered here, please visit the <a href="/support/contact.html">Contact Us</a>
+                    page, email the He Lab at <a href="mailto:yongqunh@umich.edu">yongqunh@umich.edu</a>, or open a
+                    discussion/issue on the
+                    <a href="https://github.com/sea-cdm/SEA-CDM" target="_blank">SEA-CDM GitHub repository</a>.
+                </p>
+            </details>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+</body>
+</html>
