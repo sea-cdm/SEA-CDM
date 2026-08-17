@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assay Documentation</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../template.js"></script>
+</head>
+<body>
+    <div id="navbar-container"></div>
+    
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+            <!-- Sidebar will be loaded here -->
+            <div id="sidebar-section"></div>
+            
+            <!-- Main content area -->
+            <div class="main-content">
+                <h1>Groups</h1>
+
+                <p>
+                    A group is defined as a collection of multiple individual instances that are grouped as part of an analysis. The Group class has six core attributes: composition, subject group type, sample group type, minimum age, maximum age, and group size.
+                </p>
+
+                <p>
+                    A Group's sample group type is meant to identify the common feature of the selected subjects, either within one experiment or across multiple experiments. Similarly, the usage of minimum and maximum age is used due to how human cohorts indicate age ranges for privacy. For non-human subjects, the minimum and maximum ages can be calculated from the sample group.
+                </p>
+
+                <p>
+                    A Group's sample group type is meant to distinguish between the usage of a biosample or expsample for the creation of a group.                
+                </p>
+                
+                <h2>Group Properties</h2>
+                
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Description</th>
+                                <th>Example Usage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>group_id</code></td>
+                                <td>A primary key used to identify a specific group.</td>
+                                <td>"GROUP_1"</td>
+                            </tr>
+                            <tr>
+                                <td><code>subject_group_type</code></td>
+                                <td>A string representing if a group is about an organism or sample.</td>
+                                <td>"Organism", "Population"</td>
+                            </tr>
+                            <tr>
+                                <td><code>subject_group_type_id</code></td>
+                                <td>A string used to identify the ontology id that corresponds to a group type.</td>
+                                <td>OBI_0001479, OBI_0100079</td>
+                            </tr>
+                            <tr>
+                                <td><code>sample_group_type</code></td>
+                                <td>A string representing if a group is about an organism or sample.</td>
+                                <td>"Biosample", "Expsample"</td>
+                            </tr>
+                            <tr>
+                                <td><code>sample_group_type_id</code></td>
+                                <td>A string used to identify the ontology id that corresponds to a group type.</td>
+                                <td>OBI_0100051</td>
+                            </tr>
+                            <tr>
+                                <td><code>composition</code></td>
+                                <td>A value that describes the nature of the group as a collection of instances for the same organism, multiple experimental replicates, or a heterogeneous group.</td>
+                                <td>"Sample", "Organism"</td>
+                            </tr>
+                            <tr>
+                                <td><code>group_size</code></td>
+                                <td>A value that stores how many individual organisms are contained within a group.</td>
+                                <td>36</td>
+                            </tr>
+                            <tr>
+                                <td><code>min_group_age</code></td>
+                                <td>A double that records the youngest age of an organism or a sample derived from an organism in a group.</td>
+                                <td>17</td>
+                            </tr>
+                            <tr>
+                                <td><code>min_age_unit</code></td>
+                                <td>A string represent the unit associated with the min_group_age</td>
+                                <td>"Day", "Month"</td>
+                            </tr>
+                            <tr>
+                                <td><code>min_age_unit_id</code></td>
+                                <td>A string represent the ontology id min_age_unit.</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><code>max_group_age</code></td>
+                                <td>A double that records the youngest age of an organism or a sample derived from an organism in a group.</td>
+                                <td>87</td>
+                            </tr>
+                            <tr>
+                                <td><code>max_age_unit</code></td>
+                                <td>A string represent the unit associated with the max_group_age</td>
+                                <td>"Day", "Month"</td>
+                            </tr>
+                            <tr>
+                                <td><code>max_age_unit_id</code></td>
+                                <td>A string represent the ontology id max_age_unit.</td>
+                                <td>UO:0000035, UO:0000033</td>
+                            </tr>
+                            <tr>
+                                <td><code>reference_id</code></td>
+                                <td>A string used to identify an external reference for the group.</td>
+                                <td>"ARM512"</td>
+                            </tr>
+                            <tr>
+                                <td><code>reference_source</code></td>
+                                <td>A string used to identify the source of the <code>reference_id</code>.</td>
+                                <td>"ImmPort"</td>
+                            </tr>
+                            <tr>
+                                <td><code>comments</code></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+</html>

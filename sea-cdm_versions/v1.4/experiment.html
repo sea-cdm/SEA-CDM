@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assay Documentation</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../template.js"></script>
+</head>
+<body>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+            <!-- Sidebar will be loaded here -->
+            <div id="sidebar-section"></div>
+
+            <!-- Main content area -->
+            <div class="main-content">
+                <h1>Experiment</h1>
+                <p>
+                    An Experiment is a planned process that contains all Interventions performed on a Subject in preparation for all Assays. The Experiment class can include clinical visits, experimental controls, and experimental changes. The Experiment class contains three attributes:
+                </p>
+
+                <ul class="attribute-list">
+                    <li><strong>Type</strong> &ndash; determines the intended outcome for an experiment; i.e. is it to gather information for diagnosis in a clinical visit or a scientific experiment to answer a hypothesis.</li>
+                    <li><strong>Subject</strong> &ndash; describes the subject focus of an experiment; this may be a specific trait or subject (if multiple traits about the subject are being investigated).</li>
+                    <li><strong>Experiment control</strong> &ndash; denotes if the procedure for an Experiment is intended to serve as a control; i.e. otherwise lacking a specific intervention compared to other Experiments.</li>
+                </ul>
+
+                <h2>Experiment Properties</h2>
+                <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Example Usage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>experiment_id</code></td>
+                            <td>An primary key that corresponds to an instance of an experiment.</td>
+                            <td>"EXPER_1"</td>
+                        </tr>
+                        <tr>
+                            <td><code>study_id</code></td>
+                            <td>A foreign key that corresponds to a <a href="study.html">study</a> an experiment belongs to.</td>
+                            <td>"STUDY_1"</td>
+                        </tr>
+                        <tr>
+                            <td><code>documentation_id</code></td>
+                            <td>A foreign key that corresponds to a <a href="documentation.html">document</a> that describes the protocol used as part of this experiment.</td>
+                            <td>"DOCU_1"</td>
+                        </tr>
+                        <tr>
+                            <td><code>experiment_control</code></td>
+                            <td>A binary flag used to indicate if an experiment row is used as part of an experimental control or not.</td>
+                            <td>"True", "False"</td>
+                        </tr>
+                        <tr>
+                            <td><code>experiment_subject</code></td>
+                            <td>A string used to represent the subject focus used for an experiment.</td>
+                            <td>"humans", "cell lines"</td>
+                        </tr>
+                        <tr>
+                            <td><code>experiment_subject_id</code></td>
+                            <td>An uriorcurie used to match <code>experiment_subject</code> to an ontology ID.</td>
+                            <td>NCBITaxon:9606</td>
+                        </tr>
+                        <tr>
+                            <td><code>experiment_type</code></td>
+                            <td>A string used to describe the type of an experiment performed.</td>
+                            <td>"Clinical Visit", "Experiment"</td>
+                        </tr>
+                        <tr>
+                            <td><code>experiment_type_id</code></td>
+                            <td>An uriorcurie used to match <code>experiment_type</code> to an ontology ID.</td>
+                            <td>OBI:0500000</td>
+                        </tr>
+                        <tr>
+                            <td><code>reference_id</code></td>
+                            <td>A foreign ID used to represent the source of an experiment from another source. Must be paired with <code>reference_source</code>.</td>
+                            <td>"ARM_0000002"</td>
+                        </tr>
+                        <tr>
+                            <td><code>reference_source</code></td>
+                            <td>A string representing the reference source for an experiment.</td>
+                            <td>ImmPort</td>
+                        </tr>
+                        <tr>
+                            <td><code>comments</code></td>
+                            <td>A string used as a placeholder for extra words.</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+</html>

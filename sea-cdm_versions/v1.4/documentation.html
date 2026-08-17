@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentation | SEA-CDM v1.3</title>
+    <title>Assay Documentation</title>
     <link rel="stylesheet" href="../../css/style.css">
     <script src="../../template.js"></script>
 </head>
@@ -14,22 +14,23 @@
     <div class="container" style="width: 95%; max-width: none;">
         <div class="page-container">
             <!-- Sidebar will be loaded here -->
-            <div id="sidebar-section-archive"></div>
+            <div id="sidebar-section"></div>
             
             <!-- Main content area -->
             <div class="main-content">
-
-                <div class="archive-banner">
-                    ⚠️ You are viewing archived documentation for
-                    <strong>SEA-CDM Version 1.3</strong>.
-                    <a href="/sea-cdm_documentation/index.html">
-                        View current documentation (v1.4) →
-                    </a>
-                </div>
-
                 <h1>Documentation</h1>
 
-                <p>An unsorted table used to identify all documentation (data types, protocols, or results).</p>
+                <p>
+                    An unsorted table used to identify all documentation (data types, protocols, or results). Documentation provides information to access the file and search the file based on its name or type of property. The text contained within the specific documentation is not stored directly within the SEA-CDM file formats. The Documentation class contains six core attributes:
+                </p>
+
+                <ul class="attribute-list">
+                    <li><strong>Name</strong> &ndash; the title or label used to identify the documentation.</li>
+                    <li><strong>Type</strong> &ndash; refers to the purpose of the Document, and includes manuscripts, protocols and datasets for the different planned processes.</li>
+                    <li><strong>File access</strong> &ndash; provides a direct link to download the information.</li>
+                    <li><strong>Citation</strong> and <strong>citation style</strong> &ndash; meant to simplify reporting of documentation.</li>
+                    <li><strong>Creator name</strong> and <strong>creator role</strong> &ndash; paired; typically the creator's role is either the 'reporting agent role' (OBI:0000068) for creators which uploaded or wrote the file or 'responsible party role' (OBI:00000102) if only the publisher is known.</li>
+                </ul>
 
                 <h2>Documentation Properties</h2>
 
@@ -39,49 +40,49 @@
                             <tr>
                                 <th>Property</th>
                                 <th>Description</th>
-                                <th>Usage</th>
+                                <th>Example Usage</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>documentation_id</td>
+                                <td><code>documentation_id</code></td>
                                 <td>A primary key used to identify a specific documentation for a document as part of the study.</td>
                                 <td>"DOCU_1"</td>
                             </tr>
                             <tr>
-                                <td>study_id</td>
-                                <td>A foreign key used to identify a study that documentation belongs to.</td>
+                                <td><code>study_id</code></td>
+                                <td>A foreign key used to identify a <a href="study.html">study</a> that documentation belongs to.</td>
                                 <td>"STUDY_1"</td>
                             </tr>
                             <tr>
                                 <td>document_name</td>
-                                <td>A string used to identify the name of a document.</td>
-                                <td>"VIGET: A web portal for study of vaccine-induced host responses based on Reactome pathways and ImmPort data"</td>
+                                <td>A string used to represent the name of documentation.</td>
+                                <td>VIGET: A web portal for study of vaccine-induced host responses based on Reactome pathways and ImmPort data.</td>
                             </tr>
                             <tr>
                                 <td>documentation_type</td>
                                 <td>A string used to represent what the documentation is about; i.e. protocol, paper, results, etc.</td>
-                                <td>"Research Paper"</td>
+                                <td>"Protocol",<br>"Research Paper"</td>
                             </tr>
                             <tr>
-                                <td>documentation_type_id</td>
-                                <td>A string used to represent the id of the associated document type.</td>
-                                <td>“IAO_0000312” (publication about investigation)</td>
+                                <td>document_type_id</td>
+                                <td>A uriorcurie used to represent the id of the associated document type.</td>
+                                <td>IAO:0000030</td>
                             </tr>
                             <tr>
-                                <td>documentation_file_access</td>
+                                <td>document_file_access</td>
                                 <td>A string representing a URL or file source for a document.</td>
-                                <td>"10.3389/fimmu.2023.1141030"</td>
+                                <td><a href="https://doi.org/10.3389/fimmu.2023.1141030">10.3389/fimmu.2023.1141030</a></td>
+                            </tr>
+                            <tr>
+                                <td>reference_id</td>
+                                <td>A string used to identify a foreign ID used for a document. This is paired to reference_source.</td>
+                                <td>PMID:1351321</td>
                             </tr>
                             <tr>
                                 <td>reference_source</td>
-                                <td>A string used to identify the source of documentation that a reference_source_id belongs to.</td>
+                                <td>A string used to identify the source of documentation that a reference_id belongs to.</td>
                                 <td>PubMed</td>
-                            </tr>
-                            <tr>
-                                <td>reference_source_id</td>
-                                <td>A string used to identify a foreign ID used for a document. This is paired to reference_source.</td>
-                                <td>PMID_1351321</td>
                             </tr>
                             <tr>
                                 <td>citation</td>
@@ -101,17 +102,17 @@
                             <tr>
                                 <td>creator_id_type</td>
                                 <td>A string used to find a unique identifier of a person (if available) or organization who has a role in the creation of the documentation.</td>
-                                <td>"ORC-ID"</td>
+                                <td>"ORC-ID", "Organization_ID"</td>
                             </tr>
                             <tr>
                                 <td>creator_role</td>
-                                <td>An OBI ID used to identify the role of a person is involved in, such as creator for documentation.</td>
-                                <td>“reporting agent role”, “responsible party role”</td>
+                                <td>A string used to identify the role of a person is involved in, such as creator for documentation.</td>
+                                <td>"reporting agent role", "responsible party role"</td>
                             </tr>
                             <tr>
                                 <td>creator_role_id</td>
-                                <td>An OBI ID used to identify the role a person is involved in, such as an author or corresponding author, for this document.</td>
-                                <td>OBI_0000068 (reporting agent role),OBI_0000102 (responsible party role)</td>
+                                <td>An uriorcurie used to identify the role a person is involved in, such as an author or corresponding author, for this document.</td>
+                                <td>OBI:0000068,<br>OBI:0000102</td>
                             </tr>
                             <!-- <tr>
                                 <td>person_id</td>

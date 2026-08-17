@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assay Documentation</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../template.js"></script>
+</head>
+<body>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+    
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+            <!-- Sidebar will be loaded here -->
+            <div id="sidebar-section"></div>
+            
+            <!-- Main content area -->
+            <div class="main-content">
+                <h1>Occurrence</h1>
+                <p>
+                    An occurrence is defined as a history that affects an organism as part of its lifespan. Occurrences include disease processes, pregnancy, and adverse events (lethal or otherwise). The Occurrence class has five core attributes: name, type, severity, start time, end time.
+                </p>
+
+                <ul class="attribute-list">
+                    <li><strong>Name</strong> and <strong>type</strong> &ndash; are split to characterize different usages of occurrences. An occurrence can be listed as part of a Subject's history, as an adverse event (OAE:0000001), or pre-existing phenotype (UPHENO:0010010) for experiments.</li>
+                </ul>
+                
+                <h2>Occurrence Properties</h2>
+                
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Description</th>
+                                <th>Example Usage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>occurrence_id</code></td>
+                                <td>An internal identifier used to identify a specific occurrence.</td>
+                                <td>"OCCUR_1"</td>
+                            </tr>
+                            <tr>
+                                <td><code>organism_id</code></td>
+                                <td>An identifier that maps to an <a href="subject.html">organism</a>.</td>
+                                <td>"ORGO_1"</td>
+                            </tr>
+                            <tr>
+                                <td><code>occurrence_name</code></td>
+                                <td>A string that lists the reported summary of an occurrence.</td>
+                                <td>"Diabetes", "Fever", "Influenza"</td>
+                            </tr>
+                            <tr>
+                                <td><code>occurrence_name_id</code></td>
+                                <td>A string that lists the ontology ID used to identify an occurrence.</td>
+                                <td>DOID:0081062, OAE:0000361, DOID:8469</td>
+                            </tr>
+                            <tr>
+                                <td><code>occurence_type</code></td>
+                                <td>A string used to identify the type of an occurrence.</td>
+                                <td>"Adverse Event", "Phenotype"</td>
+                            </tr>
+                            <tr>
+                                <td><code>occurence_type_id</code></td>
+                                <td>A uriorcurie used to identify the ontology ID for <code>occurence_type</code>.</td>
+                                <td>OAE:0000001,<br>UPHENO:0010010</td>
+                            </tr>
+                            <tr>
+                                <td><code>occurrence_severity</code></td>
+                                <td>An integer that corresponds to the severity of an occurrence using the Common Terminology for Adverse Events (CTCAE). Benign occurrences are rated as 0.</td>
+                                <td>"0", "1", "2", "3", "4", "5"</td>
+                            </tr>
+                            <tr>
+                                <td><code>occurence_t0</code></td>
+                                <td>A string used to identify the time 0 reference for onset study.</td>
+                                <td>"Organism age", "Time of enrollment", "Time of administration"</td>
+                            </tr>
+                            <tr>
+                                <td><code>occurence_t0_id</code></td>
+                                <td>A string used to identify the event for Intervention_t0</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><code>occurence_onset</code></td>
+                                <td>A double that lists the onset of an occurrence for an organism.</td>
+                                <td>"-7", "7"</td>
+                            </tr>
+                            <tr>
+                                <td><code>occurence_onset_unit</code></td>
+                                <td>A string used to identify the unit for <code>occurence_onset</code>.</td>
+                                <td>"Year"</td>
+                            </tr>
+                            <tr>
+                                <td><code>occurence_onset_unit_id</code></td>
+                                <td>A uriorcurie used to identify the ontology ID for <code>occurence_onset_unit_id</code>.</td>
+                                <td>UO:000035</td>
+                            </tr>
+                            <tr>
+                                <td><code>occurence_end</code></td>
+                                <td>A double that lists the end of an occurrence for an organism.</td>
+                                <td>"-1", "7"</td>
+                            </tr>
+                            <tr>
+                                <td><code>occurence_end_unit</code></td>
+                                <td>A string used to identify the unit for <code>occurence_end</code>.</td>
+                                <td>"Year"</td>
+                            </tr>
+                            <tr>
+                                <td><code>occurence_end_id</code></td>
+                                <td>A uriorcurie used to identify the ontology ID for <code>occurence_end_unit_id</code>.</td>
+                                <td>UO:000035</td>
+                            </tr>
+                            <tr>
+                                <td><code>reference_id</code></td>
+                                <td>A string that corresponds to the occurrence's ID in another dataset. Must be matched with ForeignSource.</td>
+                                <td>"ADVR00001"</td>
+                            </tr>
+                            <tr>
+                                <td><code>reference_source_id</code></td>
+                                <td>A string identifier that corresponds to the data source of the corresponding ForeignID.</td>
+                                <td>"ImmPort"</td>
+                            </tr>
+                            <tr>
+                                <td><code>comments</code></td>
+                                <td>Placeholder for additional comments.</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+</html>

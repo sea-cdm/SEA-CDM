@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assay Documentation</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../template.js"></script>
+</head>
+<body>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+    
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+            <!-- Sidebar will be loaded here -->
+            <div id="sidebar-section"></div>
+            
+            <!-- Main content area -->
+            <div class="main-content">
+                <h1>Assay</h1>
+                
+                <p>
+                    An assay is a planned process that is defined as a planned process which generates data about a Subject or Sample. The Assay class contains five attributes: type, reagents, platform, and subject input.
+                </p>
+
+                <p>
+                    An Assay's <strong>subject input</strong> is to indicate if an assay uses a Sample or the Subject. Observations or surveys would be indicated as True.
+                </p>
+
+                <p>
+                    An Assay's <strong>platforms and reagents</strong> are unique in that they are lists of all materials used for a specific reagent.
+                </p>
+                
+                <h2>Assay Properties</h2>
+                
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Description</th>
+                                <th>Example Usage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>assay_id</td>
+                                <td>An internal id used to describe an assay type.</td>
+                                <td>"ASSAY_1"</td>
+                            </tr>
+                            <tr>
+                                <td>documentation_id</td>
+                                <td>An id of the documentation table used to identify the reference document describing the process of an assay.</td>
+                                <td>"DOCU_1"</td>
+                            </tr>
+                            <tr>
+                                <td>assay_name</td>
+                                <td>A string representing the name of an assay; this specifies a general type of features.</td>
+                                <td>"Blood.RNA-Microarray"</td>
+                            </tr>
+                            <tr>
+                                <td>assay_type</td>
+                                <td>An assay category used to assign the type of the assay it belongs to.  This is used to describe measurement or observation or survey.</td>
+                                <td>"Experimental Assay", "Observation"</td>
+                            </tr>
+                            <tr>
+                                <td>assay_type_id</td>
+                                <td>A string representing the OBI ID for an assay.</td>
+                                <td>ECO:0000097,<br>OBI:0000070</td>
+                            </tr>
+                            <tr>
+                                <td>subject_input</td>
+                                <td>A binary value representing if an assay necessarily involves an organism as a specimen for an assay, instead of just using a sample.</td>
+                                <td>True, False</td>
+                            </tr>
+                            <tr>
+                                <td>reagents</td>
+                                <td>A list of strings of material_names that are used as an input by an assay that are consumed by the process. This is used for experimental assays.</td>
+                                <td>"Anti-mouse antibodies"</td>
+                            </tr>
+                            <tr>
+                                <td>platform</td>
+                                <td>A list of material IDs of material_names are used as an input by an assay that are not consumed by the process. This is used for experimental assays.</td>
+                                <td>"GPL5263"</td>
+                            </tr>
+                            <tr>
+                                <td>comments</td>
+                                <td>A string used to represent comments about the dataset.</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+</html>

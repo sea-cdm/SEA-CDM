@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assay Documentation</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../template.js"></script>
+</head>
+<body>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-container"></div>
+    
+    <div class="container" style="width: 95%; max-width: none;">
+        <div class="page-container">
+            <!-- Sidebar will be loaded here -->
+            <div id="sidebar-section"></div>
+            
+            <!-- Main content area -->
+            <div class="main-content">
+                <h1>Results</h1>
+
+                <p>
+                    Results are data content entities generated from an assay, analysis of an assay, or an analysis on data that is derived from an assay. The Results class has seven core attributes: analysis type, original assay type, datatype, dataset size, file access, file type, dataset size, file access.
+                </p>
+
+                <ul class="attribute-list">
+                    <li><strong>Analysis type</strong> and <strong>original assay type</strong> &ndash; are meant to characterize how the initial data was characterized and then transformed.</li>
+                    <li><strong>Dataset size</strong> &ndash; is meant to store the internal dimensions of the file and not the memory needed to load a file.</li>
+                </ul>
+                
+                <h2>Results Properties</h2>
+                
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Description</th>
+                                <th>Example Usage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>results_id</code></td>
+                                <td>An internal ID used to identify assay results in a database.</td>
+                                <td>"RSULT_1"</td>
+                            </tr>
+                            <tr>
+                                <td><code>experiment_id</code></td>
+                                <td>An foreign key used to identify the <a href="experiment.html">experiment</a> an assay result is part of.</td>
+                                <td>"EXPER_1"</td>
+                            </tr>
+                            <tr>
+                                <td><code>group_id</code></td>
+                                <td>An ID used to identify the <a href="groups.html">group</a> an assay result is about. Groups that are about individual organisms or samples are given a special ID.</td>
+                                <td>"GROUP_1"</td>
+                            </tr>
+                            <tr>
+                                <td><code>sample_id</code></td>
+                                <td>A foreign key used to identify the <a href="sample.html">sample</a> result is about. If used for a group, use "1" as placeholder value.</td>
+                                <td>"SAMP_1"</td>
+                            </tr>
+                            <tr>
+                                <td><code>subject_id</code></td>
+                                <td>A foreign key used to identify the <a href="subject.html">subject</a> results is about. If used for a group, use "1" as placeholder value.</td>
+                                <td>"ORGO_1"</td>
+                            </tr>
+                            <tr>
+                                <td><code>documenation_id</code></td>
+                                <td>An foreign key used to identify the <a href="documentation.html">document</a> that contains the documentation for the sort.</td>
+                                <td>"DOCU_1"</td>
+                            </tr>
+                            <tr>
+                                <td><code>analysis_type</code></td>
+                                <td>A string used to identify the current analysis used to generate a result.</td>
+                                <td>Observation, Statistical-Analysis</td>
+                            </tr>
+                            <tr>
+                                <td><code>original_assay_type</code></td>
+                                <td>A string used to identify the original assay type used to generate an assay. This is always an experimental assay.</td>
+                                <td>"Blood.RNA Assay",<br>"Sequence feature detection assay"</td>
+                            </tr>
+                            <tr>
+                                <td><code>original_assay_type_id</code></td>
+                                <td>An ID used to identify the assay ID that an OriginalAssayType is part of.</td>
+                                <td>OBI:0000433,<br>OBI:0000070</td>
+                            </tr>
+                            <tr>
+                                <td><code>datatype</code></td>
+                                <td>A string used to identify the type of data the results is; either numeric, qualitative, etc.</td>
+                                <td>'Text', 'Figure', 'Image', 'Tensor'</td>
+                            </tr>
+                            <tr>
+                                <td><code>datatype_id</code></td>
+                                <td>An ontology ID that corresponds to the <code>Datatype</code>.</td>
+                                <td>IAO:0000101,<br>IAO:0000030</td>
+                            </tr>
+                            <tr>
+                                <td><code>dataset_size</code></td>
+                                <td>A string used to identify the size of a document. Currently used as a string due to variable size from matrices or hierarchical data.</td>
+                                <td>"9000", "402x27", "305x25x200"</td>
+                            </tr>
+                            <tr>
+                                <td><code>file_access</code></td>
+                                <td>A string used to identify the location or web link the results file is located. This is analogous to <code>reference_source</code> in other values.</td>
+                                <td><a href="https://zenodo.org/records/7407195">https://zenodo.org/records/7407195</a></td>
+                            </tr>
+                            <tr>
+                                <td><code>file_type</code></td>
+                                <td>A string used to identify the file type extension the data is stored as (if accessible for computers).</td>
+                                <td>".csv"</td>
+                            </tr>
+                            <tr>
+                                <td><code>replications</code></td>
+                                <td>An integer that lists how many times an analysis is repeated to generate data; multiple measurements.</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><code>comments</code></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+</body>
+</html>
