@@ -23,6 +23,7 @@ Related links:
         - SEA-CDM (Repository mainly on the documentation): https://github.com/sea-cdm/SEA-CDM
         - OSEAN-DB (Repository on OSEAN Database): https://github.com/sea-cdm/OSEAN-DB
         - OSEAN-KG (Repository on OSEAN Database in Knowledge Graph format): https://github.com/sea-cdm/OSEAN-KG
+        - OSEAN (Umbrella network program that includes SEA-CDM and its associated programs): https://github.com/sea-cdm/OSEAN  
 
 ## Developers 
 - Anthony Huffman
